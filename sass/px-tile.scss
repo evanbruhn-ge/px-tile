@@ -24,6 +24,20 @@
 
 // Objects
 @import "px-shadows-design/_objects.shadows.scss";
+@import "px-flexbox-design/_base.flexbox.scss";
+
+$inuit-enable-btn--small : true;
+$inuit-enable-btn--large : true;
+$inuit-enable-btn--huge : true;
+$inuit-enable-btn--full : true;
+$inuit-enable-btn--primary : true;
+$inuit-enable-btn--tertiary : true;
+$inuit-enable-btn--call-to-action : true;
+$inuit-enable-btn--bare : true;
+$inuit-enable-btn--bare--primary : true;
+$inuit-enable-btn--icon : true;
+$inuit-enable-btn--disabled : true;
+@import "px-buttons-design/_objects.buttons.scss";
 
 /* mixin for multiline */
 @mixin multiLineEllipsis($lineHeight: 1.2em, $lineCount: 1, $bgColor: white){
@@ -55,47 +69,65 @@
 .tile__container {
   position: relative;
 }
-.tile, .overlay {
-  min-width: var(--px-tile-width, calculateRem(100px));
-  min-height: var(--px-tile-height, calculateRem(100px));
+.tile__container, .tile, .overlay {
   width: var(--px-tile-width, calculateRem(300px));
+  max-width: var(--px-tile-width, calculateRem(300px));
   height: var(--px-tile-height, calculateRem(300px));
+  max-height: var(--px-tile-height, calculateRem(300px));
+  overflow: hidden;
 }
 .tile{
   background-color: var(--px-tile-background-color, lightgray);
   .thumbnail {
-    width: var(--px-tile-thumbnail-width, calculateRem(300px));
-    height: var(--px-tile-thumbnail-height, calculateRem(175px));
     background-color: var(--px-tile-thumbnail-background-color, white);
   }
   .tile-text-wrapper {
-    padding: 1rem;
-    height: var(--px-tile-text-height, calculateRem(125px));
+    padding: calculateRem(15px);
+    position: absolute;
+    bottom: 0;
+    width: 100%;
     background-color: var(--px-tile-text-background-color, lightgray);
     .title-span {
       color: var(--px-tile-title-color, darkslategray);
       line-height: calculateRem(22px);
+    }
+    .title-container {
+      padding-bottom: calculateRem(10px);
     }
     .subtitle-span {
       color: var(--px-tile-subtitle-color, gray);
       line-height: calculateRem(14px);
     }
     .title {
+      height: 1.6rem;
       padding: 0.1rem 0 0 0;
+      display: flex;
       align-items: left;
+      .title-btn {
+        margin-top: 0px;
+        margin-right: -3px;
+      }
     }
     .subtitle {
-      padding: 0 0 calculateRem(10px) 0;
+      display: flex;
       align-items: left;
     }
     .text {
       position: relative;
       margin-right: 1rem;
+      margin-bottom: calculateRem(10px);
       color: var(--px-tile-text-color, darkslategray);
     }
     .block-with-text {
       @include multiLineEllipsis($lineHeight: 1rem, $lineCount: 2, $bgColor: var(--px-tile-text-background-color, lightgray ));
     }
+    
+  }
+  .tile-text-wrapper.tile-text-adjust {
+    min-height: var(--px-tile-about-min-height, 0);
+    padding: var(--px-tile-about-padding, 1rem);
+    right: var(--px-tile-about-right);
+    bottom: var(--px-tile-about-bottom, 0);
   }
 }
 
@@ -106,44 +138,77 @@
   color: var(--px-tile-overlay-text-color, white);
   opacity: 0;
   transition: opacity 0.4s cubic-bezier(.78,.13,.16,.87);
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
   .header-wrapper{
     margin-top: 1.6rem;
-    height: 3.2rem;
+    .title-span {
+      width: 100%;
+    }
   }
   .title {
     background: none;
     margin-top: 0.6rem;
+    width: 100%;
     padding: 0 1.3333rem;
+    .title-btn {
+      margin-right: -6px;
+    }
   }
   .subtitle {
+    height: 1.2rem;
     line-height: calculateRem(14px);
     padding: 0 1.3333rem;
   }
   .text {
-    padding: 0 1.3333rem;
-    height: var(--px-tile-overlay-desc-text-height, 9.1rem);
-    overflow: hidden;
-    margin-top: 1.6rem;
+    padding: calculateRem(8px) 1.3333rem 0;
+    line-height: var(--px-tile-overlay-desc-line-height, calculateRem(15px));
+    font-size: var(--px-tile-overlay-desc-font-size, calculateRem(12px));
   }
   .footer {
-    padding: 1rem 1.3333rem;
-    margin-top: 1.6rem;
-    height: 3.66667rem;
+    padding: 0 1.3333rem;
+    margin-top: calculateRem(5px);
+    margin-bottom: calculateRem(10px);
   }
   .header-wrapper, .text, .footer {
     transition: margin-top 0.2s cubic-bezier(0.78, 0.13, 0.16, 0.87) 0.1s;
+  }
+  .overlay-top-content {
+    overflow: hidden;
+  }
+  .footer-container {
+    position: absolute;
+    bottom: var(--px-tile-action-buttons-bottom, 15px);
+    right: var(--px-tile-action-buttons-right, 15px);  
+    width: 100%;
+    background-color: var(--px-tile-overlay-background-color, black);
   }
 }
 
 .hovered.overlay {
   opacity: 1;
-  .header-wrapper, .text, .footer {
+  .header-wrapper, .footer {
     margin-top: 1rem;
   }
 }
-
-
+.overlay-remove {
+  visibility: hidden;
+  display: none !important;
+}
+.btn-overlay {
+  color: var(--px-tile-overlay-text-color, lightgray);
+}
+.btn-tile-bare-primary {
+  color: var(--px-btn-bare-color,#2c404c);
+}
+.action-buttons-wrapper {
+  position: var(--px-tile-action-buttons-position);   
+  right: var(--px-tile-action-buttons-right);   
+  bottom: var(--px-tile-action-buttons-bottom);   
+     
+}
+.action-overlay-btns {
+  position: var(--px-tile-overlay-action-buttons-position);  
+  bottom: var(--px-tile-overlay-action-buttons-bottom);  
+  right: var(--px-tile-overlay-action-buttons-right);  
+  width: var(--px-tile-overlay-width); 
+}
 // Trumps

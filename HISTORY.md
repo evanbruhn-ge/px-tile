@@ -1,3 +1,8 @@
+v2.0.1
+==================
+* merge #4
+* Fix up CSS variable comments.
+
 v2.0.0
 ==================
 * merge #1

@@ -6,6 +6,7 @@
     <title>Web Component Test : Fixture for px-tile</title>
     <script src="../../webcomponentsjs/webcomponents-lite.js"></script>
     <script src="../../web-component-tester/browser.js"></script>
+    <script src="../node_modules/jquery/dist/jquery.min.js"></script>
     <link rel="import" href="../px-tile.html" />
     <link rel="import" href="../bower_components/px-theme/px-theme-styles.html"/>
     <script src="px-tile-custom-tests.js"></script>
@@ -18,12 +19,13 @@
     <test-fixture id="px_tile_1">
       <template>
         <px-tile
-                title="Title text"
+                main-title="Title text"
                  subtitle="Subtitle text"
                  description="Description"
                  overlay-description="Overlay Description text"
-                 hoverable>
-          <img slot="thumbnail" src="../demo/turbine.jpg"/>
+                 hoverable
+                 action-buttons="{}" >
+          <img slot="thumbnail" src="../demo/gas_turbine.png"/>
           <div slot="footer">Footer</div>
         </px-tile>
       </template>

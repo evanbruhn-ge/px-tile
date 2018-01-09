@@ -50,6 +50,14 @@
         px-tile {
           margin: 1rem;
           cursor: pointer;
+          /* Customize width and height of px tile */
+          /*--px-tile-width : 20rem;*/
+          --px-tile-height: 19rem;
+          /*  ===== description text truncate adjustment  ========
+          For example, if you want to truncate this description after 3 lines, use 3rem */
+          /* keep in mind that total height of about are (bottom text portion) depends on
+             presence of title, subtitle, description text and actionable button */
+          --px-tile-desc-text-height : 3rem;
         }
         .footer {
           display: flex;
@@ -77,11 +85,12 @@
   <body>
     <div style="display:flex; flex-wrap:wrap;">
       <px-tile onclick="goToLink()"
-               title="Component Name"
-               description="Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Donec sed odio dui. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Donec sed odio dui. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Donec sed odio dui."
+               main-title="Component Name"
+               description="Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Donec sed odio dui. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Donec sed odio dui. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Donec sed odio dui.  Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.  Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit."
+               overlay-description="Overlay description text : Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam porta sem malesuada magna mollis euismod. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Maecenas sed diam eget risus varius blandit sit amet non magna."
                hoverable="true">
         <div class="thumbnail" slot="thumbnail">
-          <img src="turbine.jpg"/ >
+          <img src="turbine.jpg"/>
         </div>
         <div class="footer" slot="footer">
           <px-icon icon="px-fea:tag"></px-icon>
@@ -91,11 +100,12 @@
         </div>
       </px-tile>
       <px-tile onclick="goToLink()"
-               title="Component Name"
+               main-title="Component Name"
                description="Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Donec sed odio dui. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Donec sed odio dui. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Donec sed odio dui."
+               overlay-description="Overlay description text : Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam porta sem malesuada magna mollis euismod. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Maecenas sed diam eget risus varius blandit sit amet non magna."
                hoverable="true">
         <div class="thumbnail" slot="thumbnail">
-          <img src="turbine.jpg"/ >
+          <img src="turbine.jpg"/>
         </div>
         <div class="footer" slot="footer">
           <px-icon icon="px-fea:tag"></px-icon>
@@ -105,11 +115,12 @@
         </div>
       </px-tile>
       <px-tile onclick="goToLink()"
-               title="Component Name"
+               main-title="Component Name"
                description="Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Donec sed odio dui. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Donec sed odio dui. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Donec sed odio dui."
+               overlay-description="Overlay description text : Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam porta sem malesuada magna mollis euismod. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Maecenas sed diam eget risus varius blandit sit amet non magna."
                hoverable="true">
         <div class="thumbnail" slot="thumbnail">
-          <img src="turbine.jpg"/ >
+          <img src="turbine.jpg"/>
         </div>
         <div class="footer" slot="footer">
           <px-icon icon="px-fea:tag"></px-icon>
@@ -119,11 +130,12 @@
         </div>
       </px-tile>
       <px-tile onclick="goToLink()"
-               title="Component Name"
+               main-title="Component Name"
                description="Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Donec sed odio dui. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Donec sed odio dui. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Donec sed odio dui."
+               overlay-description="Overlay description text : Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam porta sem malesuada magna mollis euismod. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Maecenas sed diam eget risus varius blandit sit amet non magna."
                hoverable="true">
         <div class="thumbnail" slot="thumbnail">
-          <img src="turbine.jpg"/ >
+          <img src="turbine.jpg"/>
         </div>
         <div class="footer" slot="footer">
           <px-icon icon="px-fea:tag"></px-icon>
@@ -133,11 +145,12 @@
         </div>
       </px-tile>
       <px-tile onclick="goToLink()"
-               title="Component Name"
+               main-title="Component Name"
                description="Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Donec sed odio dui. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Donec sed odio dui. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Donec sed odio dui."
+               overlay-description="Overlay description text : Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam porta sem malesuada magna mollis euismod. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Maecenas sed diam eget risus varius blandit sit amet non magna."
                hoverable="true">
         <div class="thumbnail" slot="thumbnail">
-          <img src="turbine.jpg"/ >
+          <img src="turbine.jpg"/>
         </div>
         <div class="footer" slot="footer">
           <px-icon icon="px-fea:tag"></px-icon>
@@ -147,11 +160,12 @@
         </div>
       </px-tile>
       <px-tile onclick="goToLink()"
-               title="Component Name"
+               main-title="Component Name"
                description="Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Donec sed odio dui. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Donec sed odio dui. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Donec sed odio dui."
+               overlay-description="Overlay description text : Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam porta sem malesuada magna mollis euismod. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Maecenas sed diam eget risus varius blandit sit amet non magna."
                hoverable="true">
         <div class="thumbnail" slot="thumbnail">
-          <img src="turbine.jpg"/ >
+          <img src="turbine.jpg"/>
         </div>
         <div class="footer" slot="footer">
           <px-icon icon="px-fea:tag"></px-icon>
@@ -161,11 +175,12 @@
         </div>
       </px-tile>
       <px-tile onclick="goToLink()"
-               title="Component Name"
+               main-title="Component Name"
                description="Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Donec sed odio dui. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Donec sed odio dui. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Donec sed odio dui."
+               overlay-description="Overlay description text : Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam porta sem malesuada magna mollis euismod. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Maecenas sed diam eget risus varius blandit sit amet non magna."
                hoverable="true">
         <div class="thumbnail" slot="thumbnail">
-          <img src="turbine.jpg"/ >
+          <img src="turbine.jpg"/>
         </div>
         <div class="footer" slot="footer">
           <px-icon icon="px-fea:tag"></px-icon>
@@ -175,11 +190,12 @@
         </div>
       </px-tile>
       <px-tile onclick="goToLink()"
-               title="Component Name"
+               main-title="Component Name"
                description="Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Donec sed odio dui. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Donec sed odio dui. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Donec sed odio dui."
+               overlay-description="Overlay description text : Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam porta sem malesuada magna mollis euismod. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Maecenas sed diam eget risus varius blandit sit amet non magna."
                hoverable="true">
         <div class="thumbnail" slot="thumbnail">
-          <img src="turbine.jpg"/ >
+          <img src="turbine.jpg"/>
         </div>
         <div class="footer" slot="footer">
           <px-icon icon="px-fea:tag"></px-icon>
@@ -189,11 +205,12 @@
         </div>
       </px-tile>
       <px-tile onclick="goToLink()"
-               title="Component Name"
+               main-title="Component Name"
                description="Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Donec sed odio dui. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Donec sed odio dui. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Donec sed odio dui."
+               overlay-description="Overlay description text : Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam porta sem malesuada magna mollis euismod. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Maecenas sed diam eget risus varius blandit sit amet non magna."
                hoverable="true">
         <div class="thumbnail" slot="thumbnail">
-          <img src="turbine.jpg"/ >
+          <img src="turbine.jpg"/>
         </div>
         <div class="footer" slot="footer">
           <px-icon icon="px-fea:tag"></px-icon>

@@ -1,0 +1,28 @@
+{
+  "items": [
+    {
+      "id": "1",
+      "label": "Return",
+      "size": "small",
+      "type": "bare",
+      "buttonIcon": true,
+      "icon": "px-utl:link"
+    },
+    {
+      "id": "2",
+      "label": "Scrap",
+      "size": "small",
+      "type": "bare",
+      "buttonIcon": true,
+      "icon": "px-utl:copy"
+    },
+    {
+      "id": "3",
+      "label": "Download",
+      "size": "small",
+      "type": "bare",
+      "buttonIcon": true,
+      "icon": "px-utl:download"
+    }
+  ]
+}

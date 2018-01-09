@@ -1,0 +1,45 @@
+{
+  "items": [
+    {
+      "id": "1",
+      "label": "Return",
+      "size": "small",
+      "type": "bare",
+      "buttonIcon": true,
+      "icon": "px-utl:link"
+    },
+    {
+      "id": "2",
+      "label": "Scrap",
+      "size": "small",
+      "type": "bare",
+      "buttonIcon": true,
+      "icon": "px-utl:copy"
+    },
+    {
+      "id": "103",
+      "label": "Favorite",
+      "size": "small",
+      "type": "bare",
+      "buttonIcon": true,
+      "icon": "px-nav:favorite",
+      "isPrimary": true
+    },
+    {
+      "id": "3",
+      "label": "Download",
+      "size": "small",
+      "type": "bare",
+      "buttonIcon": true,
+      "icon": "px-utl:download"
+    },
+    {
+      "id": "4",
+      "label": "Call",
+      "size": "small",
+      "type": "bare",
+      "buttonIcon": true,
+      "icon": "px-utl:phone"
+    }
+  ]
+}

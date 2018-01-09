@@ -31,8 +31,13 @@ Second, import the component to your application with the following tag in your 
 Finally, use the component in your application:
 
 ```
-<px-tile title="title" subtitle="Subtitle text" description="Description" overlay-description="Overlay Description text" hoverable>
-  <div slot="thumbnail"><img src="../turbine.jpg"/></div>
+<px-tile
+  title="title text"
+  subtitle="subtitle text"
+  description="description text"
+  overlay-description="overlay description text"
+  action-buttons='{"items":[{"id":"103","size":"small","type":"bare","buttonIcon":true,"icon":"px-nav:reload","isPrimary":true},{"id":"1","label":"Return","size":"small","type":"bare","buttonIcon":true,"icon":"px-utl:link"},{"id":"2","label":"Scrap","size":"small","type":"bare","buttonIcon":true,"icon":"px-utl:copy"},{"id":"3","label":"Download","size":"small","type":"bare","buttonIcon":true,"icon":"px-utl:download"}]}' 
+  hoverable >
   <div slot="footer">Footer Content Here</div>
 </px-tile>
 ```
@@ -64,6 +69,10 @@ $ gulp serve
 ```
 
 Navigate to the root of that server (e.g. http://localhost:8080/) in a browser to open the API documentation page, with link to the "Demo" / working examples.
+
+1. Interactive demo - http://localhost:8080/
+2. Simple demo - http://localhost:8080/demo/simple_demo.html
+3. Various usages demo - http://localhost:8080/demo/components-mix-demo.html
 
 ### GE Coding Style Guide
 [GE JS Developer's Guide](https://github.com/GeneralElectric/javascript)
