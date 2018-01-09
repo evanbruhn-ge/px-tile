@@ -8,74 +8,69 @@
 <link rel="import" href="css/px-tile-styles.html">
 
 <!--
-Px-tile tile can be customized with px theme, mainTitle, subtitle, description, buttons, imagery or px components. This also means that applications may choose to include or exclude any of these elements. It also provides actionable callback functionalities(text,button,icon e.g.) meaning developers may choose to utilize them to perform customizable actions based on user's input.
-
-Typically, Px-tile can be utilized for actions such as: contact cards, work orders, inspections, media tiles, or an overview of a device.
+Px-tile is a highly customizable component for displaying text and an image or other component. Example use cases include contact cards, work orders, inspections, media tiles, or an overview of a device.
 
 ### Note
 
-There are two <slot> elements in which you can add content:  `<div slot="thumbnail"></div>`  and  `<div slot="footer"></div>`.  
-Since these <slot> elements are used to display content you are responsible for styling, make sure the content follows the Predix guidelines. 
-You can find an example demo under `demo/components-mix-demo.html` showing how to use these <slot> elements.
+There are two `<slot>` elements in which you can add custom content - `thumbnail` and  `footer`.
+Since these `<slot>` elements are used to display custom content, you are responsible for styling that content accordingly.
+Make sure the content follows Predix design guidelines.
 
 
 ### Usage
 
-	#### image-based thumbnail
+	#### Example: Thumbnail Image
 	```
-    <px-tile
-      mainTitle="title text"
-      subtitle="subtitle text"
-      description="description text"
-      overlay-description="overlay description text"
-      hoverable  
-      action-buttons='{"items":[{"id":"1","size":"small","type":"bare","buttonIcon":true,"icon":"px-utl:link"},{"id":"2","size":"small","type":"bare","buttonIcon":true,"icon":"px-utl:copy"},{"id":"3","size":"small","type":"bare","buttonIcon":true,"icon":"px-utl:download"}]}' >
-      <div slot="thumbnail">
-         <img src$="../turbine.jpg" />
-       </div>
-      <div slot="footer">Footer Content Here</div>
-    </px-tile>
+  <px-tile
+    main-title="title text"
+    subtitle="subtitle text"
+    description="description text"
+    overlay-description="overlay description text"
+    hoverable>
+    <div slot="thumbnail">
+        <img src="../turbine.jpg" />
+      </div>
+    <div slot="footer">Footer Content Here</div>
+  </px-tile>
 	```
 
-	#### px-chart-based thumbnail
+	#### Example: Displaying a Predix Chart
 	```
-    <px-tile
-      mainTitle="title text"
-      subtitle="subtitle text"
-      description="description text"
-      overlay-description="overlay description text"
-      action-buttons='{"items":[{"id":"1","label":"Return","size":"small"},{"id":"2","label":"Scrap","size":"small"},{"id":"3","label":"Download","size":"small","type":"bare","buttonIcon":true,"icon":"px-utl:download"}]}' 
-      hoverable >
-      <div slot="thumbnail" class="px-simple-horizontal-bar-chart">
-        <px-simple-horizontal-bar-chart
-          id="default-chart"
-          width="auto"
-          height="160"
-          chart-data="[100,200,300,400,500,360]"
-          colors='["#123453","#234784","#345453","#467564","#578785","#578756"]'
-          domain-max="500"
-          legend-labels='[
-              "No Action", "Scheduled Maintenance", "Sensor Repair",
-              "Unplanned Maintenance", "Ops Changes", "Forced Outage", "eight"
-          ]'>
-        </px-simple-horizontal-bar-chart>
-        </div>
-      <div slot="footer">Footer Content Here</div>
-    </px-tile>
+  <px-tile
+    main-title="title text"
+    subtitle="subtitle text"
+    description="description text"
+    overlay-description="overlay description text"
+    action-buttons='{"items":[{"id":"1","label":"Return","size":"small"},{"id":"2","label":"Scrap","size":"small"},{"id":"3","label":"Download","size":"small","type":"bare","buttonIcon":true,"icon":"px-utl:download"}]}'
+    hoverable>
+    <div slot="thumbnail" class="px-simple-horizontal-bar-chart">
+      <px-simple-horizontal-bar-chart
+        id="default-chart"
+        width="auto"
+        height="160"
+        chart-data="[100,200,300,400,500,360]"
+        colors='["#123453","#234784","#345453","#467564","#578785","#578756"]'
+        domain-max="500"
+        legend-labels='[
+            "No Action", "Scheduled Maintenance", "Sensor Repair",
+            "Unplanned Maintenance", "Ops Changes", "Forced Outage", "eight"
+        ]'>
+      </px-simple-horizontal-bar-chart>
+      </div>
+    <div slot="footer">Footer Content Here</div>
+  </px-tile>
 	```
-    
-    
-    
-### Action Buttons object properties
 
-Object Key| Value Type | Options | Default
-:----|:----|:---|:---
-maxButtons * | Number | 1,2,3,4,... | 3
-items | Array | Objects, see below 'Buttons object properties' table  | []
 
- **maxButtons is used to display max buttons below the description, if max is reached it will display as dropdown menu.
 
-E.g. 
+### Action Buttons Configuration
+The `actionButtons` property expects a configuration object in the following format.
+The `items` array specifies the configuration of each button, and the `maxButtons` property
+determines how many buttons to display in the tile - if more buttons are defined, they will
+be placed into an overflow dropdown menu instead. The first button configuration with `isPrimary`
+set as true will be considered the main button for the tile, and will be displayed in the title/header
+area of the tile - all others will be placed in the bottom of the tile.
+
 ```
 {
   "items": [
@@ -95,44 +90,25 @@ E.g.
       "size": "small",
       "type": "bare",
       "buttonIcon": true,
-      "icon": "px-utl:download"
+      "icon": "px-utl:download",
+      "isPrimary": true
     }
   ],
   "maxButtons": "2"
 }
 ```
 
-
-### Buttons object properties 
+Each button definition in the `items` array can have the following properties:
 
 Object Key| Value Type | Options | Default
 :----|:----|:---|:---
-`id` | Number | User defined | User defined
-`label` | String | User defined |  User defined
+`id` | String | |
+`label` | String | |
 `size` | String | `small, regular, large, huge, full` | regular
 `type` | String | `primary, secondary, call to action, tertiary, bare, bare primary` | secondary
 `buttonIcon` | Boolean | `true, false` | false
-`icon` | String | See https://www.predix-ui.com/#/elements/px-icon-set | none
+`icon` | String | See https://www.predix-ui.com/#/elements/px-icon-set |
 `isPrimary` | Boolean | `true, false`  | false
-
-E.g. 
-```
-{
-  "id": "1",
-  "label": "Link",
-  "size": "small",
-  "type": "bare",
-  "buttonIcon": true,
-  "icon": "px-utl:link",
-  "isPrimary": true
-} 
-```
-
-### Event fired on item selection: 
-``` 
-px-tile-action-tapped 
-```
-See CustomEvent section below.
 
 
 

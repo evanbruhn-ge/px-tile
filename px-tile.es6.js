@@ -8,6 +8,8 @@
        * If true, hovering over the card will cause an overlay to appear
        * with more detailed information, including the description
        * and an optional slot for showing a footer at the bottom.
+       * _Note: not recommended for mobile applications due to variation
+       * or lack of support for hover on mobile devices._
        */
       hoverable: {
         type: Boolean,
@@ -40,8 +42,8 @@
        /**
         * Description information to be displayed underneath tile and subtitle.
         * Default : Only the first ~3 lines of text will be displayed, after which it will be truncated.
-        * You can customize this using by adjusting `--px-tile-desc-text-height` SASS variable. (e.g. 1 line = 1 rem,
-        * to set to 5 lines truncated, set --px-tile-desc-text-height : 5rem)
+        * You can customize by adjusting the `--px-tile-desc-text-height` CSS variable. (e.g. 1 line = 1 rem,
+        * to set to 5 lines truncated, set `--px-tile-desc-text-height: 5rem`).
        */
       description: {
         type: String,
@@ -59,12 +61,10 @@
         observer: '_onDataChanged'
       },
       /**
-       * Action buttons display below description.
-       * 
-       * Event fired on item selection:
-       * 
-       * `px-tile-action-tapped`
-       * 
+       * Configuration object for the action buttons displayed in the tile.
+       * The primary button is displayed in the header/title area of the tile
+       * whereas the rest are displayed at the bottom of the tile.
+       * The `px-tile-action-tapped` event is fired when any of the action buttons is tapped.
        */
       actionButtons: {
         type: Object,
@@ -129,7 +129,7 @@
       this._onDataChanged();
     },
     /**
-     * On change callback for either property to set _hasTitleActionBtn, _hasTitleSubtitleActionBtn, and _hasData flags 
+     * On change callback for either property to set _hasTitleActionBtn, _hasTitleSubtitleActionBtn, and _hasData flags
      */
     _onDataChanged() {
       this._hasTitleActionBtn = this.mainTitle && this.mainTitle.length > 0|| this._hasPrimaryBtn;
@@ -137,17 +137,16 @@
       this._hasData = this._hasActionButtons || this._hasTitleSubtitleActionBtn;
     }
     /**
-     * @event px-tile-action-tapped  
-     * 
-     * Event ` px-tile-action-tapped ` is fired when an item is selected from actionButtons.items with selection detail. E.g. {"id": "1", "label": "Favorite"}
-     * 
-     * Example:
-     *  
-     * ` window.addEventListener('px-tile-action-tapped', function(evt){ ` 
-     * 
-     * `    console.log(evt.detail); ` 
-
-     * ` }); `
+     * @event px-tile-action-tapped
+     *
+     * Event fired when an item from actionButtons is tapped. `Evt.detail` includes the details of the tapped item, e.g. `{"id": "1", "label": "Favorite"}`
+     *
+     * Usage:
+     * ```
+     * window.addEventListener('px-tile-action-tapped', function(evt){
+     *   console.log(evt.detail);
+     * });
+     * ```
      */
   });
 })();
