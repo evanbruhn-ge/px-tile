@@ -1,3 +1,7 @@
+v3.0.1
+==================
+* fix demo for light/dark theme
+
 v3.0.0
 ==================
 * merge #3
