@@ -1,3 +1,7 @@
+v3.0.2
+==================
+* remove `<custom-style>` from component demo cause breaking IE.
+
 v3.0.1
 ==================
 * fix demo for light/dark theme
