@@ -198,7 +198,8 @@ Custom property | Description | Default
 	          </template>
 	          <template is="dom-if" if="{{description}}">
 	            <div class="text zeta"><div class="block-with-text">{{description}}</div></div>
-	          </template>
+              </template>
+              <slot name="body"></slot>
 	          <template is="dom-if" if="{{_hasActionButtons}}">
               <div class="action-buttons-wrapper">
                 <px-tile-action-buttons id="pxActionButtons" action-buttons="{{actionButtons}}"></px-tile-action-buttons>
