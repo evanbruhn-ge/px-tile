@@ -103,7 +103,6 @@
        */
       titleValidator: {
         type: Function,
-        value: function() {},
         observer: '_titleValidatorChanged'
       },
       /**
