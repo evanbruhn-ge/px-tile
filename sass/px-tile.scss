@@ -32,17 +32,24 @@
 @import "px-shadows-design/_objects.shadows.scss";
 @import "px-flexbox-design/_base.flexbox.scss";
 
-$inuit-enable-btn--small : true;
-$inuit-enable-btn--large : true;
-$inuit-enable-btn--huge : true;
-$inuit-enable-btn--full : true;
-$inuit-enable-btn--primary : true;
-$inuit-enable-btn--tertiary : true;
-$inuit-enable-btn--call-to-action : true;
-$inuit-enable-btn--bare : true;
-$inuit-enable-btn--bare--primary : true;
-$inuit-enable-btn--icon : true;
-$inuit-enable-btn--disabled : true;
+// Forms
+$inuit-enable-validation-states: true;
+@import 'px-forms-design/_base.forms.scss';
+
+// Colors
+@import 'px-colors-design/_settings.colors.scss';
+
+$inuit-enable-btn--small: true;
+$inuit-enable-btn--large: true;
+$inuit-enable-btn--huge: true;
+$inuit-enable-btn--full: true;
+$inuit-enable-btn--primary: true;
+$inuit-enable-btn--tertiary: true;
+$inuit-enable-btn--call-to-action: true;
+$inuit-enable-btn--bare: true;
+$inuit-enable-btn--bare--primary: true;
+$inuit-enable-btn--icon: true;
+$inuit-enable-btn--disabled: true;
 @import "px-buttons-design/_objects.buttons.scss";
 
 /* mixin for multiline */
@@ -98,7 +105,9 @@ $inuit-enable-btn--disabled : true;
       line-height: calculateRem(22px);
     }
     .title-container {
-      padding-bottom: calculateRem(10px);
+      // TODO: Make dynamic
+      //padding-bottom: calculateRem(10px);
+      padding-bottom: calculateRem(25px);
     }
     .subtitle-span {
       color: var(--px-tile-subtitle-color, gray);
@@ -217,4 +226,27 @@ $inuit-enable-btn--disabled : true;
   right: var(--px-tile-overlay-action-buttons-right);  
   width: var(--px-tile-overlay-width); 
 }
+.title-edit-button {
+  margin-left: 0 !important;
+
+  .rounded {
+    width: 20px;
+    height: 20px;
+    --iron-icon-width: 20px;
+    --iron-icon-height: 20px;
+    border-radius: 50%;
+    border: 1px solid var(--px-tile-edit-form-button-color, #007acc);
+    stroke: var(--px-tile-edit-form-button-color, #007acc);
+    padding: 2px;
+  }
+
+  &:disabled .rounded {
+    border: 1px solid var(--px-tile-edit-form-button-disabled-color, $neutral-gray5);
+    stroke: var(--px-tile-edit-form-button-disabled-color, $neutral-gray5);
+  }
+}
+.action-button-container {
+  margin: 3px;
+}
+
 // Trumps

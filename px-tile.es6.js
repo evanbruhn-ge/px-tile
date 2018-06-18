@@ -87,6 +87,32 @@
         type: Object,
         value: {},
         observer: '_actionButtonsChanged'
+      },
+      /**
+       * Controls whether the title can be edited via an inline form.
+       * Also enables behaviour where the title form will be shown if the title property is blank.
+       */
+      titleEditable: {
+        type: String,
+        value: '',
+        observer: '_titleEditableChanged'
+      },
+      /**
+       * Validator that's executed when the title is changed via the title form.
+       * Utilizes the px-validation component, supplied functions should return true (valid) or false (invalid).
+       */
+      titleValidator: {
+        type: Function,
+        value: function() {},
+        observer: '_titleValidatorChanged'
+      },
+      /**
+       * Validator that's executed when the title is changed via the title form.
+       * Utilizes the px-validation component, supplied functions should return true (valid) or false (invalid).
+       */
+      _showEditForm: {
+        type: Boolean,
+        value: true
       }
     },
     /**
@@ -152,7 +178,28 @@
       this._hasTitleActionBtn = this.mainTitle && this.mainTitle.length > 0|| this._hasPrimaryBtn;
       this._hasTitleSubtitleActionBtn = this.subtitle && this.subtitle.length > 0 || this._hasTitleActionBtn;
       this._hasData = this._hasActionButtons || this._hasTitleSubtitleActionBtn;
+      this._showEditForm = this.mainTitle.length === 0;
+    },
+
+    /**
+     * Observer for title-editable property, controls whether the title form will appear when _showEditForm property is true and/or when mainTitle property is blank
+     */
+    _titleEditableChanged(title) {
+      // TODO: This does nothing yet.
+    },
+
+    /**
+     * Observer for title-validator property changes.
+     */
+    _titleValidatorChanged(validator) {
+      // Handle functions specified in component markup (ie. strings)
+      if (typeof validator === 'string') {
+        // TODO: There must be a better way!
+        this.titleValidator = eval(validator);
+        return;
+      }
     }
+
     /**
      * @event px-tile-action-tapped
      *

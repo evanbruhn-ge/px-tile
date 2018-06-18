@@ -21,6 +21,7 @@ limitations under the License.
 -->
 <link rel="import" href="../polymer/polymer.html" />
 <link rel="import" href="px-tile-action-buttons.html"/>
+<link rel="import" href="px-tile-edit-title-form.html"/>
 <link rel="import" href="css/px-tile-styles.html">
 
 <!--
@@ -182,9 +183,12 @@ Custom property | Description | Default
 		          <div class="title-container">
 		            <template is="dom-if" if="{{_hasTitleActionBtn}}">
 				          <div class="title flex flex--justify">
-				            <template is="dom-if" if="{{mainTitle}}">
-				              <span class="epsilon truncate title-span">{{mainTitle}}</span>
-				            </template>
+				            <template is="dom-if" if="{{!_showEditForm}}">
+                      <span class="epsilon truncate title-span">{{mainTitle}}</span>
+                    </template>
+                    <template is="dom-if" if="{{_showEditForm}}">
+                      <px-tile-edit-title-form validator="{{titleValidator}}" current-title="{{mainTitle}}" new-title="[[mainTitle]]" show-edit-form="{{_showEditForm}}"></px-tile-edit-title-form>
+                    </template>
 				            <span></span> <!-- empty span to right align primary action button -->
 				            <template is="dom-if" if="{{_hasPrimaryBtn}}">
 				              <px-tile-action-buttons id="pxTilePrimaryBtns" action-buttons="{{actionButtons}}" primary="true"></px-tile-action-buttons>

@@ -149,7 +149,7 @@
         this._items = actionBtns.items;
         this.async(function() {
           // adjust dropdown to appear aligned to the right
-          let dropdown = Polymer.dom(pxDropdown.root).querySelector('#dropdown');
+          let dropdown = Polymer.dom(pxDropdown.root).querySelector('#content');
           dropdown.set('horizontalAlign', 'right');
           let button = Polymer.dom(pxDropdown.root).querySelector('#button');
           this.button = button;
@@ -177,13 +177,10 @@
      * Callback for selected/unselected action title dropdown items when the list is greater than 3
      */
     _itemSelected(evt) {
-      let pxDropdown = this.$$('#pxDropdown');
-      if(this.actionButtons.multi || pxDropdown._displayValueSelected === evt.detail.val) {
-        this._handleSelection({
-          label: evt.detail.val, 
-          id: evt.detail.key
-        });
-      }
+      this._handleSelection({
+        label: evt.detail.detail.item.title,
+        id: evt.detail.detail.selected
+      });
     },
     /**
      * Fires px-title-action with selection detail. E.g. {"id": "1", "label": "Favorite", "selected": true}

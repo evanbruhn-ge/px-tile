@@ -29,7 +29,8 @@
     "px-dropdown": "^4.1.0",
     "px-icon-set": "^2.1.1",
     "px-flexbox-design": "^1.0.2",
-    "px-buttons-design": "^2.0.5"
+    "px-buttons-design": "^2.0.5",
+    "px-forms-design": "^2.1.2"
   },
   "devDependencies": {
     "px-demo": "^3.0.0",
@@ -43,9 +44,8 @@
     "web-component-tester": "^6.3.0",
     "px-dark-theme": "^2.1.0",
     "px-vis": "^5.0.0",
-    "px-simple-horizontal-bar-chart": "^1.0.3"
     "px-simple-horizontal-bar-chart": "^1.0.3",
-    "px-chip": "latest"
+    "px-chip": "^1.1.4"
   },
   "resolutions": {
     "webcomponentsjs": "^1.0.0",
