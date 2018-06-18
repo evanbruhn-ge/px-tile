@@ -43,17 +43,20 @@ limitations under the License.
   <template>
     <style include="px-tile-styles"></style>
     <div class="flex flex--left">
-      <input id="titleInput" class="text-input input--regular" type="text" on-keyup="isValid" value="{{newTitle::input}}" />
+      <input id="titleInput" class="text-input input--regular" type="text" on-keyup="handleKeypress" value="{{newTitle::input}}" />
+      <!-- Save button -->
       <button id="commitEdit" class="btn btn--bare btn--icon title-edit-save-button title-edit-button" on-click="commitEdit">
         <px-icon icon="px-utl:check" class="rounded">Save</px-icon>
       </button>
-      <template is="dom-if" if="{{currentTitle.length > 0}}">
+      <!-- Hide the cancel button if the current px-tile title is empty (as there's no valid state to revert to) -->
+      <template is="dom-if" if="{{currentTitle}}">
         <button id="cancelEdit" class="btn btn--bare btn--icon title-edit-cancel-button title-edit-button" on-click="cancelEdit">
           <px-icon icon="px-utl:close" class="rounded">Cancel</px-icon>
         </button>
       </template>
     </div>
     <div class="flex flex--left">
+      <!-- Validation error container -->
       <small id="invalidTitleError" class="caps form-field__help validation-error hidden"></small>
     </div>
   </template>
