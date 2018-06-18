@@ -24,10 +24,7 @@
        * Validator that's executed when the title is changed via the title form.
        */
       validator: {
-        type: Function,
-        value: function() {
-          return { valid: true };
-        }
+        type: Function
       },
       valid: {
         type: Boolean
@@ -89,7 +86,7 @@
     },
 
     getValidity: function() {
-      return this.validator(this.newTitle);
+      return typeof this.validator === 'function' ? this.validator(this.newTitle) : { valid: true };
     }
   });
 })();
