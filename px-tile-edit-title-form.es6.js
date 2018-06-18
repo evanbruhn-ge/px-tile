@@ -57,23 +57,39 @@
       this.isValid();
     },
 
-    isValid: function() {
+    handleKeypress: function(e) {
+      const inputValidState = this.getValidity();
+      this.applyValidationStyle(inputValidState.valid, inputValidState.message);
+      if (inputValidState.valid && e.key === 'Enter') {
+        // Save on enter if input is valid
+        this.commitEdit();
+      }
+      if (this.currentTitle && e.key === 'Escape') {
+        // Cancel on escape if there's a valid input to revert to
+        this.cancelEdit();
+      }
+    },
+
+    applyValidationStyle(valid, message) {
       const titleInput = this.$$('#titleInput');
       const invalidTitleError = this.$$('#invalidTitleError');
       const saveButton = this.$$('#commitEdit');
 
-      var result = this.validator(this.newTitle);
-      if (result.valid) {
+      if (valid) {
         invalidTitleError.classList.add('hidden');
         invalidTitleError.innerText = '';
         titleInput.classList.remove('validation-error');
         saveButton.disabled = false;
       } else {
         invalidTitleError.classList.remove('hidden');
-        invalidTitleError.innerText = result.message || 'Invalid title';
+        invalidTitleError.innerText = message || 'Invalid title';
         titleInput.classList.add('validation-error');
         saveButton.disabled = true;
       }
+    },
+
+    getValidity: function() {
+      return this.validator(this.newTitle);
     }
   });
 })();
