@@ -87,6 +87,8 @@ $inuit-enable-btn--disabled: true;
   max-width: var(--px-tile-width, calculateRem(300px));
   height: var(--px-tile-height, 100%);
   max-height: var(--px-tile-height, 100%);
+  height: var(--px-tile-height, unset);
+  max-height: var(--px-tile-height, unset);
   overflow: hidden;
 }
 .tile{
