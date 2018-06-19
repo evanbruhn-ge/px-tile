@@ -1,4 +1,4 @@
-/**
+'use strict';/**
  * @license
  * Copyright (c) 2018, General Electric
  *
@@ -13,9 +13,7 @@
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
  * See the License for the specific language governing permissions and
  * limitations under the License.
- */
-
-'use strict';(function(){Polymer({is:'px-tile-action-buttons',properties:{/**
+ */(function(){Polymer({is:'px-tile-action-buttons',properties:{/**
        * Current text color of overlay to apply other elements when hovering
        */hoverTextColor:{type:String,value:''},/**
        * Boolean to find out if items list is in overlay
@@ -45,11 +43,11 @@ var item=actionBtns.items[x];item.key=item.id||item.key;item.val=item.label||ite
 if(actionBtns.sortMode&&actionBtns.sortMode==='label'){actionBtns.sortMode='val'}else if(actionBtns.sortMode!=='val'){actionBtns.sortMode='key'}if(actionBtns.selectBy&&actionBtns.selectBy==='label'){actionBtns.selectBy='val'}else if(actionBtns.selectBy!=='val'){actionBtns.selectBy='key'}for(var id in actionBtns){// set other properties from dropdown if passed
 pxDropdown.set(id,actionBtns[id])}// set _items here 
 this._items=actionBtns.items;this.async(function(){// adjust dropdown to appear aligned to the right
-var dropdown=Polymer.dom(pxDropdown.root).querySelector('#dropdown');dropdown.set('horizontalAlign','right');var button=Polymer.dom(pxDropdown.root).querySelector('#button');this.button=button;this.pxIcon=Polymer.dom(button).querySelector('px-icon');if(this.pxIcon){this.pxIcon.style.right='-6px';if(this.overlay){this.pxIcon.style.color=this.hoverTextColor}}})},100)},/**
+var dropdown=Polymer.dom(pxDropdown.root).querySelector('#content');dropdown.set('horizontalAlign','right');var button=Polymer.dom(pxDropdown.root).querySelector('#button');this.button=button;this.pxIcon=Polymer.dom(button).querySelector('px-icon');if(this.pxIcon){this.pxIcon.style.right='-6px';if(this.overlay){this.pxIcon.style.color=this.hoverTextColor}}})},100)},/**
      * Callback for on-tap event for action items when the list size is 3 or less
      */_onSelected:function _onSelected(evt){var item=evt.detail.model||evt.model.item;this._handleSelection({label:item.label,id:item.id})},/**
      * Callback for selected/unselected action title dropdown items when the list is greater than 3
-     */_itemSelected:function _itemSelected(evt){var pxDropdown=this.$$('#pxDropdown');if(this.actionButtons.multi||pxDropdown._displayValueSelected===evt.detail.val){this._handleSelection({label:evt.detail.val,id:evt.detail.key})}},/**
+     */_itemSelected:function _itemSelected(evt){this._handleSelection({label:evt.detail.detail.item.title,id:evt.detail.detail.selected})},/**
      * Fires px-title-action with selection detail. E.g. {"id": "1", "label": "Favorite", "selected": true}
      */_handleSelection:function _handleSelection(detail){if(this._notifyActionChange){this.fire('px-tile-action-tapped',detail)}},/**
      * Return button class type and size if any

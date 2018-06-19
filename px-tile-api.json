@@ -13,11 +13,11 @@
           "privacy": "public",
           "sourceRange": {
             "start": {
-              "line": 2,
+              "line": 17,
               "column": 9
             },
             "end": {
-              "line": 2,
+              "line": 17,
               "column": 46
             }
           },
@@ -33,11 +33,11 @@
           "privacy": "public",
           "sourceRange": {
             "start": {
-              "line": 4,
+              "line": 19,
               "column": 9
             },
             "end": {
-              "line": 4,
+              "line": 19,
               "column": 43
             }
           },
@@ -53,11 +53,11 @@
           "privacy": "public",
           "sourceRange": {
             "start": {
-              "line": 6,
+              "line": 21,
               "column": 9
             },
             "end": {
-              "line": 6,
+              "line": 21,
               "column": 43
             }
           },
@@ -73,11 +73,11 @@
           "privacy": "public",
           "sourceRange": {
             "start": {
-              "line": 9,
+              "line": 24,
               "column": 9
             },
             "end": {
-              "line": 9,
+              "line": 24,
               "column": 78
             }
           },
@@ -96,11 +96,11 @@
           "privacy": "protected",
           "sourceRange": {
             "start": {
-              "line": 11,
+              "line": 26,
               "column": 7
             },
             "end": {
-              "line": 11,
+              "line": 26,
               "column": 102
             }
           },
@@ -113,11 +113,11 @@
           "privacy": "protected",
           "sourceRange": {
             "start": {
-              "line": 13,
+              "line": 28,
               "column": 7
             },
             "end": {
-              "line": 13,
+              "line": 28,
               "column": 104
             }
           },
@@ -130,11 +130,11 @@
           "privacy": "protected",
           "sourceRange": {
             "start": {
-              "line": 18,
+              "line": 33,
               "column": 7
             },
             "end": {
-              "line": 23,
+              "line": 38,
               "column": 455
             }
           },
@@ -147,12 +147,12 @@
           "privacy": "protected",
           "sourceRange": {
             "start": {
-              "line": 25,
+              "line": 40,
               "column": 7
             },
             "end": {
-              "line": 30,
-              "column": 368
+              "line": 45,
+              "column": 367
             }
           },
           "metadata": {},
@@ -168,11 +168,11 @@
           "privacy": "protected",
           "sourceRange": {
             "start": {
-              "line": 32,
+              "line": 47,
               "column": 7
             },
             "end": {
-              "line": 32,
+              "line": 47,
               "column": 140
             }
           },
@@ -189,12 +189,12 @@
           "privacy": "protected",
           "sourceRange": {
             "start": {
-              "line": 34,
+              "line": 49,
               "column": 7
             },
             "end": {
-              "line": 34,
-              "column": 232
+              "line": 49,
+              "column": 139
             }
           },
           "metadata": {},
@@ -210,11 +210,11 @@
           "privacy": "protected",
           "sourceRange": {
             "start": {
-              "line": 36,
+              "line": 51,
               "column": 7
             },
             "end": {
-              "line": 36,
+              "line": 51,
               "column": 130
             }
           },
@@ -231,11 +231,11 @@
           "privacy": "protected",
           "sourceRange": {
             "start": {
-              "line": 39,
+              "line": 54,
               "column": 7
             },
             "end": {
-              "line": 39,
+              "line": 54,
               "column": 367
             }
           },
@@ -252,11 +252,11 @@
           "privacy": "protected",
           "sourceRange": {
             "start": {
-              "line": 41,
+              "line": 56,
               "column": 7
             },
             "end": {
-              "line": 41,
+              "line": 56,
               "column": 495
             }
           },
@@ -276,11 +276,11 @@
           "privacy": "protected",
           "sourceRange": {
             "start": {
-              "line": 43,
+              "line": 58,
               "column": 7
             },
             "end": {
-              "line": 43,
+              "line": 58,
               "column": 280
             }
           },
@@ -300,11 +300,11 @@
           "privacy": "protected",
           "sourceRange": {
             "start": {
-              "line": 45,
+              "line": 60,
               "column": 7
             },
             "end": {
-              "line": 45,
+              "line": 60,
               "column": 145
             }
           },
@@ -326,11 +326,11 @@
       "metadata": {},
       "sourceRange": {
         "start": {
-          "line": 0,
-          "column": 33
+          "line": 15,
+          "column": 23
         },
         "end": {
-          "line": 45,
+          "line": 60,
           "column": 146
         }
       },
@@ -342,11 +342,11 @@
           "description": "Current text color of overlay to apply other elements when hovering",
           "sourceRange": {
             "start": {
-              "line": 2,
+              "line": 17,
               "column": 9
             },
             "end": {
-              "line": 2,
+              "line": 17,
               "column": 46
             }
           },
@@ -358,11 +358,11 @@
           "description": "Boolean to find out if items list is in overlay",
           "sourceRange": {
             "start": {
-              "line": 4,
+              "line": 19,
               "column": 9
             },
             "end": {
-              "line": 4,
+              "line": 19,
               "column": 43
             }
           },
@@ -374,11 +374,11 @@
           "description": "Boolean to display primary button",
           "sourceRange": {
             "start": {
-              "line": 6,
+              "line": 21,
               "column": 9
             },
             "end": {
-              "line": 6,
+              "line": 21,
               "column": 43
             }
           },
@@ -390,11 +390,11 @@
           "description": "Action buttons to display below the description/copy text.\nPlease refer to px-dropdown (https://github.com/PredixDev/px-dropdown) for a list of supported properties",
           "sourceRange": {
             "start": {
-              "line": 9,
+              "line": 24,
               "column": 9
             },
             "end": {
-              "line": 9,
+              "line": 24,
               "column": 78
             }
           },
@@ -411,6 +411,299 @@
       "tagname": "px-tile-action-buttons"
     },
     {
+      "description": "### Usage\n    This is a helper component to support editable titles via an inline edit form\n    \n    <px-tile-edit-title-form validator=\"{{titleValidator}}\" current-title=\"{{mainTitle}}\" new-title=\"[[mainTitle]]\" show-edit-form=\"{{_showEditForm}}\"></px-tile-edit-title-form>",
+      "summary": "",
+      "path": "dist/px-tile-edit-title-form.js",
+      "properties": [
+        {
+          "name": "validator",
+          "type": "Function",
+          "description": "Validator that's executed when the title is changed via the title form.",
+          "privacy": "public",
+          "sourceRange": {
+            "start": {
+              "line": 17,
+              "column": 9
+            },
+            "end": {
+              "line": 17,
+              "column": 34
+            }
+          },
+          "metadata": {
+            "polymer": {}
+          }
+        },
+        {
+          "name": "currentTitle",
+          "type": "string",
+          "description": "The mainTitle property set on the px-tile when the px-tile-edit-title-form component was revealed",
+          "privacy": "public",
+          "sourceRange": {
+            "start": {
+              "line": 19,
+              "column": 9
+            },
+            "end": {
+              "line": 19,
+              "column": 56
+            }
+          },
+          "metadata": {
+            "polymer": {
+              "notify": true
+            }
+          },
+          "defaultValue": "\"\""
+        },
+        {
+          "name": "newTitle",
+          "type": "string",
+          "description": "The current value of the px-tile edit title input field. If valid, this property is used to set the mainTitle property on save.",
+          "privacy": "public",
+          "sourceRange": {
+            "start": {
+              "line": 21,
+              "column": 9
+            },
+            "end": {
+              "line": 21,
+              "column": 40
+            }
+          },
+          "metadata": {
+            "polymer": {}
+          },
+          "defaultValue": "\"\""
+        },
+        {
+          "name": "showEditForm",
+          "type": "boolean",
+          "description": "Property used internally for showing or hiding the edit title form",
+          "privacy": "public",
+          "sourceRange": {
+            "start": {
+              "line": 23,
+              "column": 9
+            },
+            "end": {
+              "line": 23,
+              "column": 48
+            }
+          },
+          "metadata": {
+            "polymer": {
+              "notify": true
+            }
+          }
+        }
+      ],
+      "methods": [
+        {
+          "name": "commitEdit",
+          "description": "Applies the input form value to the parent px-tile's mainTitle property (reflected via the currentTitle property) and hides the edit form",
+          "privacy": "public",
+          "sourceRange": {
+            "start": {
+              "line": 25,
+              "column": 7
+            },
+            "end": {
+              "line": 25,
+              "column": 235
+            }
+          },
+          "metadata": {},
+          "params": []
+        },
+        {
+          "name": "cancelEdit",
+          "description": "Hides the edit form without saving",
+          "privacy": "public",
+          "sourceRange": {
+            "start": {
+              "line": 27,
+              "column": 7
+            },
+            "end": {
+              "line": 27,
+              "column": 111
+            }
+          },
+          "metadata": {},
+          "params": []
+        },
+        {
+          "name": "handleKeypress",
+          "description": "Applies validation styles to the edit form based on the result from the validator function,\nand triggers save and cancel with the Enter and Escape keys respectively.",
+          "privacy": "public",
+          "sourceRange": {
+            "start": {
+              "line": 30,
+              "column": 7
+            },
+            "end": {
+              "line": 32,
+              "column": 19
+            }
+          },
+          "metadata": {},
+          "params": [
+            {
+              "name": "e"
+            }
+          ]
+        },
+        {
+          "name": "applyValidationStyle",
+          "description": "Applies validation styles to the edit form.",
+          "privacy": "public",
+          "sourceRange": {
+            "start": {
+              "line": 34,
+              "column": 7
+            },
+            "end": {
+              "line": 34,
+              "column": 532
+            }
+          },
+          "metadata": {},
+          "params": [
+            {
+              "name": "valid"
+            },
+            {
+              "name": "message"
+            }
+          ]
+        },
+        {
+          "name": "getValidity",
+          "description": "Determines the validity of the input value. If no validator function is provided, will always report true (ie. valid)",
+          "privacy": "public",
+          "sourceRange": {
+            "start": {
+              "line": 36,
+              "column": 7
+            },
+            "end": {
+              "line": 36,
+              "column": 127
+            }
+          },
+          "metadata": {},
+          "params": []
+        }
+      ],
+      "staticMethods": [],
+      "demos": [
+        {
+          "url": "index.html",
+          "description": ""
+        }
+      ],
+      "metadata": {},
+      "sourceRange": {
+        "start": {
+          "line": 15,
+          "column": 23
+        },
+        "end": {
+          "line": 36,
+          "column": 128
+        }
+      },
+      "privacy": "public",
+      "superclass": "HTMLElement",
+      "attributes": [
+        {
+          "name": "validator",
+          "description": "Validator that's executed when the title is changed via the title form.",
+          "sourceRange": {
+            "start": {
+              "line": 17,
+              "column": 9
+            },
+            "end": {
+              "line": 17,
+              "column": 34
+            }
+          },
+          "metadata": {},
+          "type": "Function"
+        },
+        {
+          "name": "current-title",
+          "description": "The mainTitle property set on the px-tile when the px-tile-edit-title-form component was revealed",
+          "sourceRange": {
+            "start": {
+              "line": 19,
+              "column": 9
+            },
+            "end": {
+              "line": 19,
+              "column": 56
+            }
+          },
+          "metadata": {},
+          "type": "string"
+        },
+        {
+          "name": "new-title",
+          "description": "The current value of the px-tile edit title input field. If valid, this property is used to set the mainTitle property on save.",
+          "sourceRange": {
+            "start": {
+              "line": 21,
+              "column": 9
+            },
+            "end": {
+              "line": 21,
+              "column": 40
+            }
+          },
+          "metadata": {},
+          "type": "string"
+        },
+        {
+          "name": "show-edit-form",
+          "description": "Property used internally for showing or hiding the edit title form",
+          "sourceRange": {
+            "start": {
+              "line": 23,
+              "column": 9
+            },
+            "end": {
+              "line": 23,
+              "column": 48
+            }
+          },
+          "metadata": {},
+          "type": "boolean"
+        }
+      ],
+      "events": [
+        {
+          "type": "CustomEvent",
+          "name": "current-title-changed",
+          "description": "Fired when the `currentTitle` property changes.",
+          "metadata": {}
+        },
+        {
+          "type": "CustomEvent",
+          "name": "show-edit-form-changed",
+          "description": "Fired when the `showEditForm` property changes.",
+          "metadata": {}
+        }
+      ],
+      "styling": {
+        "cssVariables": [],
+        "selectors": []
+      },
+      "slots": [],
+      "tagname": "px-tile-edit-title-form"
+    },
+    {
       "description": "Px-tile is a highly customizable component for displaying text and an image or other component. Example use cases include contact cards, work orders, inspections, media tiles, or an overview of a device.\n\n### Note\n\nThere are two `<slot>` elements in which you can add custom content - `thumbnail` and  `footer`.\nSince these `<slot>` elements are used to display custom content, you are responsible for styling that content accordingly.\nMake sure the content follows Predix design guidelines.\n\n\n### Usage\n\n  #### Example: Thumbnail Image\n  ```\n  <px-tile\n    main-title=\"title text\"\n    subtitle=\"subtitle text\"\n    description=\"description text\"\n    overlay-description=\"overlay description text\"\n    hoverable>\n    <div slot=\"thumbnail\">\n        <img src=\"../turbine.jpg\" />\n      </div>\n    <div slot=\"footer\">Footer Content Here</div>\n  </px-tile>\n  ```\n\n  #### Example: Displaying a Predix Chart\n  ```\n  <px-tile\n    main-title=\"title text\"\n    subtitle=\"subtitle text\"\n    description=\"description text\"\n    overlay-description=\"overlay description text\"\n    action-buttons='{\"items\":[{\"id\":\"1\",\"label\":\"Return\",\"size\":\"small\"},{\"id\":\"2\",\"label\":\"Scrap\",\"size\":\"small\"},{\"id\":\"3\",\"label\":\"Download\",\"size\":\"small\",\"type\":\"bare\",\"buttonIcon\":true,\"icon\":\"px-utl:download\"}]}'\n    hoverable>\n    <div slot=\"thumbnail\" class=\"px-simple-horizontal-bar-chart\">\n      <px-simple-horizontal-bar-chart\n        id=\"default-chart\"\n        width=\"auto\"\n        height=\"160\"\n        chart-data=\"[100,200,300,400,500,360]\"\n        colors='[\"#123453\",\"#234784\",\"#345453\",\"#467564\",\"#578785\",\"#578756\"]'\n        domain-max=\"500\"\n        legend-labels='[\n            \"No Action\", \"Scheduled Maintenance\", \"Sensor Repair\",\n            \"Unplanned Maintenance\", \"Ops Changes\", \"Forced Outage\", \"eight\"\n        ]'>\n      </px-simple-horizontal-bar-chart>\n      </div>\n    <div slot=\"footer\">Footer Content Here</div>\n  </px-tile>\n  ```\n\n\n\n### Action Buttons Configuration\nThe `actionButtons` property expects a configuration object in the following format.\nThe `items` array specifies the configuration of each button, and the `maxButtons` property\ndetermines how many buttons to display in the tile - if more buttons are defined, they will\nbe placed into an overflow dropdown menu instead. The first button configuration with `isPrimary`\nset as true will be considered the main button for the tile, and will be displayed in the title/header\narea of the tile - all others will be placed in the bottom of the tile.\n\n```\n{\n  \"items\": [\n    {\n      \"id\": \"1\",\n      \"label\": \"Return\",\n      \"size\": \"small\"\n    },\n    {\n      \"id\": \"2\",\n      \"label\": \"Scrap\",\n      \"size\": \"small\"\n    },\n    {\n      \"id\": \"3\",\n      \"label\": \"Download\",\n      \"size\": \"small\",\n      \"type\": \"bare\",\n      \"buttonIcon\": true,\n      \"icon\": \"px-utl:download\",\n      \"isPrimary\": true\n    }\n  ],\n  \"maxButtons\": \"2\"\n}\n```\n\nEach button definition in the `items` array can have the following properties:\n\nObject Key| Value Type | Options | Default\n:----|:----|:---|:---\n`id` | String | |\n`label` | String | |\n`size` | String | `small, regular, large, huge, full` | regular\n`type` | String | `primary, secondary, call to action, tertiary, bare, bare primary` | secondary\n`buttonIcon` | Boolean | `true, false` | false\n`icon` | String | See https://www.predix-ui.com/#/elements/px-icon-set |\n`isPrimary` | Boolean | `true, false`  | false\n\n\n\n### Styling\nThe following custom properties are also available for styling:\n\nCustom property | Description | Default\n:----------------|:-------------|:----------\n`--px-tile-width` | Width of the whole tile | `20rem`\n`--px-tile-height` | Height of the whole tile | `20rem`\n`--px-tile-thumbnail-width` | Width of the thumbnail portion | `20rem`\n`--px-tile-thumbnail-height` | Height of the thumbnail portion | `11.66667rem`\n`--px-tile-thumbnail-background-color` | Background color of the thumbnail portion | `white`\n`--px-tile-background-color` | Background color of the tile | `lightgray`\n`--px-tile-about-min-height` | Height of the about bottom bar | `inherit`\n`--px-tile-about-padding` | Padding of the about bottom bar | `inherit`\n`--px-tile-about-right` | Right of the about bottom bar | `inherit`\n`--px-tile-about-bottom` | Bottom of the about bottom bar | `inherit`\n`--px-tile-text-background-color` | Background color of the the bottom bar of the tile | `lightgray`\n`--px-tile-title-color` | Text color for title in the bottom bar | `darkslategray`\n`--px-tile-subtitle-color` | Text color for subtitle in the bottom bar | `gray`\n`--px-tile-text-color` | Text color for the description text in the bottom bar | `darkslategray`\n`--px-tile-action-buttons-position` | Position of action buttons | `inherit`\n`--px-tile-action-buttons-right` | Right position of action buttons | `inherit`\n`--px-tile-action-buttons-bottom` | Bottom position of action buttons | `inherit`\n`--px-tile-overlay-desc-line-height`  | Line Height of overlay description text | `1rem`\n`--px-tile-overlay-desc-font-size`  | Font Size of overlay description text | `0.8rem`\n`--px-tile-overlay-background-color` | Background color for the overlay of a hoverable tile | `black`\n`--px-tile-overlay-text-color` | Text color for the overlay of a hoverable tile | `white`\n`--px-tile-overlay-action-buttons-position` | Position of overlay action buttons | `inherit`\n`--px-tile-overlay-action-buttons-bottom` | Bottom position of overlay action buttons | `inherit`\n`--px-tile-overlay-action-buttons-right` | Right position of overlay action buttons | `inherit`\n`--px-tile-overlay-width` | Width of overlay action buttons | `inherit`\n`--px-tile-desc-text-height` |  Multi-line truncation effect for description text with the specified rem value | `2rem`\n`--px-tile-text-height`  | Height of the about section (bottom section) | `8.333rem`",
       "summary": "",
       "path": "dist/px-tile.js",
@@ -422,11 +715,11 @@
           "privacy": "public",
           "sourceRange": {
             "start": {
-              "line": 6,
+              "line": 21,
               "column": 9
             },
             "end": {
-              "line": 6,
+              "line": 21,
               "column": 74
             }
           },
@@ -444,11 +737,11 @@
           "privacy": "protected",
           "sourceRange": {
             "start": {
-              "line": 8,
+              "line": 23,
               "column": 9
             },
             "end": {
-              "line": 8,
+              "line": 23,
               "column": 44
             }
           },
@@ -464,11 +757,11 @@
           "privacy": "public",
           "sourceRange": {
             "start": {
-              "line": 10,
+              "line": 25,
               "column": 9
             },
             "end": {
-              "line": 10,
+              "line": 25,
               "column": 67
             }
           },
@@ -486,11 +779,11 @@
           "privacy": "public",
           "sourceRange": {
             "start": {
-              "line": 12,
+              "line": 27,
               "column": 9
             },
             "end": {
-              "line": 12,
+              "line": 27,
               "column": 66
             }
           },
@@ -508,11 +801,11 @@
           "privacy": "public",
           "sourceRange": {
             "start": {
-              "line": 17,
+              "line": 32,
               "column": 9
             },
             "end": {
-              "line": 17,
+              "line": 32,
               "column": 69
             }
           },
@@ -530,11 +823,11 @@
           "privacy": "public",
           "sourceRange": {
             "start": {
-              "line": 21,
+              "line": 36,
               "column": 9
             },
             "end": {
-              "line": 21,
+              "line": 36,
               "column": 76
             }
           },
@@ -552,11 +845,11 @@
           "privacy": "public",
           "sourceRange": {
             "start": {
-              "line": 26,
+              "line": 41,
               "column": 9
             },
             "end": {
-              "line": 26,
+              "line": 41,
               "column": 78
             }
           },
@@ -566,6 +859,112 @@
             }
           },
           "defaultValue": "{}"
+        },
+        {
+          "name": "titleEditable",
+          "type": "string",
+          "description": "Controls whether the title can be edited via an inline form.\nAlso enables behaviour where the title form will be shown if the title property is blank.",
+          "privacy": "public",
+          "sourceRange": {
+            "start": {
+              "line": 44,
+              "column": 9
+            },
+            "end": {
+              "line": 44,
+              "column": 78
+            }
+          },
+          "metadata": {
+            "polymer": {
+              "observer": "\"_titleEditableChanged\""
+            }
+          },
+          "defaultValue": "\"\""
+        },
+        {
+          "name": "titleValidator",
+          "type": "Function",
+          "description": "Validator that's executed when the title is changed via the title form.\nUtilizes the px-validation component, supplied functions should return an object matching the following spec:\n{ valid: true or false, message: 'optional validation error message here' }",
+          "privacy": "public",
+          "sourceRange": {
+            "start": {
+              "line": 48,
+              "column": 9
+            },
+            "end": {
+              "line": 48,
+              "column": 73
+            }
+          },
+          "metadata": {
+            "polymer": {
+              "observer": "\"_titleValidatorChanged\""
+            }
+          }
+        },
+        {
+          "name": "dropHandler",
+          "type": "Function",
+          "description": "Custom function that's invoked when the drop event is fired",
+          "privacy": "public",
+          "sourceRange": {
+            "start": {
+              "line": 50,
+              "column": 9
+            },
+            "end": {
+              "line": 50,
+              "column": 67
+            }
+          },
+          "metadata": {
+            "polymer": {
+              "observer": "\"_dropHandlerChanged\""
+            }
+          }
+        },
+        {
+          "name": "_showEditForm",
+          "type": "boolean",
+          "description": "Property used internally for showing or hiding the edit title form",
+          "privacy": "protected",
+          "sourceRange": {
+            "start": {
+              "line": 52,
+              "column": 9
+            },
+            "end": {
+              "line": 52,
+              "column": 48
+            }
+          },
+          "metadata": {
+            "polymer": {}
+          },
+          "defaultValue": "true"
+        },
+        {
+          "name": "_selected",
+          "type": "boolean",
+          "description": "Property used internally for determining the selected state on the px-tile",
+          "privacy": "protected",
+          "sourceRange": {
+            "start": {
+              "line": 54,
+              "column": 9
+            },
+            "end": {
+              "line": 54,
+              "column": 73
+            }
+          },
+          "metadata": {
+            "polymer": {
+              "observer": "\"_selectedChanged\""
+            }
+          },
+          "defaultValue": "false"
         }
       ],
       "methods": [
@@ -575,12 +974,71 @@
           "privacy": "protected",
           "sourceRange": {
             "start": {
-              "line": 28,
+              "line": 56,
               "column": 7
             },
             "end": {
-              "line": 28,
+              "line": 56,
               "column": 81
+            }
+          },
+          "metadata": {},
+          "params": []
+        },
+        {
+          "name": "_handleDrag",
+          "description": "Method used internally for setting the selected state based on the input event",
+          "privacy": "protected",
+          "sourceRange": {
+            "start": {
+              "line": 58,
+              "column": 7
+            },
+            "end": {
+              "line": 58,
+              "column": 98
+            }
+          },
+          "metadata": {},
+          "params": [
+            {
+              "name": "e"
+            }
+          ]
+        },
+        {
+          "name": "_handleDrop",
+          "description": "Handles the drop event, and prevents other drag events from blocking the drop event.\nThe drop event will be passed to the px-tile's drop-handler function if available.",
+          "privacy": "protected",
+          "sourceRange": {
+            "start": {
+              "line": 61,
+              "column": 7
+            },
+            "end": {
+              "line": 61,
+              "column": 200
+            }
+          },
+          "metadata": {},
+          "params": [
+            {
+              "name": "e"
+            }
+          ]
+        },
+        {
+          "name": "_selectedChanged",
+          "description": "Sets or removes the selected class from the px-tile container based on the selected state",
+          "privacy": "protected",
+          "sourceRange": {
+            "start": {
+              "line": 63,
+              "column": 7
+            },
+            "end": {
+              "line": 63,
+              "column": 154
             }
           },
           "metadata": {},
@@ -592,11 +1050,11 @@
           "privacy": "protected",
           "sourceRange": {
             "start": {
-              "line": 30,
+              "line": 65,
               "column": 7
             },
             "end": {
-              "line": 31,
+              "line": 66,
               "column": 68
             }
           },
@@ -609,12 +1067,12 @@
           "privacy": "protected",
           "sourceRange": {
             "start": {
-              "line": 33,
+              "line": 68,
               "column": 7
             },
             "end": {
-              "line": 33,
-              "column": 136
+              "line": 68,
+              "column": 306
             }
           },
           "metadata": {},
@@ -626,12 +1084,12 @@
           "privacy": "protected",
           "sourceRange": {
             "start": {
-              "line": 35,
+              "line": 70,
               "column": 7
             },
             "end": {
-              "line": 35,
-              "column": 122
+              "line": 70,
+              "column": 240
             }
           },
           "metadata": {},
@@ -643,11 +1101,11 @@
           "privacy": "protected",
           "sourceRange": {
             "start": {
-              "line": 37,
+              "line": 72,
               "column": 7
             },
             "end": {
-              "line": 37,
+              "line": 72,
               "column": 73
             }
           },
@@ -664,11 +1122,11 @@
           "privacy": "protected",
           "sourceRange": {
             "start": {
-              "line": 39,
+              "line": 74,
               "column": 7
             },
             "end": {
-              "line": 39,
+              "line": 74,
               "column": 416
             }
           },
@@ -681,16 +1139,79 @@
           "privacy": "protected",
           "sourceRange": {
             "start": {
-              "line": 41,
+              "line": 76,
               "column": 7
             },
             "end": {
-              "line": 41,
-              "column": 298
+              "line": 76,
+              "column": 343
             }
           },
           "metadata": {},
           "params": []
+        },
+        {
+          "name": "_titleEditableChanged",
+          "description": "Observer for title-editable property, controls whether the title form will appear when _showEditForm property is true and/or when mainTitle property is blank",
+          "privacy": "protected",
+          "sourceRange": {
+            "start": {
+              "line": 78,
+              "column": 7
+            },
+            "end": {
+              "line": 79,
+              "column": 1
+            }
+          },
+          "metadata": {},
+          "params": [
+            {
+              "name": "title"
+            }
+          ]
+        },
+        {
+          "name": "_titleValidatorChanged",
+          "description": "Observer for title-validator property changes.",
+          "privacy": "protected",
+          "sourceRange": {
+            "start": {
+              "line": 81,
+              "column": 7
+            },
+            "end": {
+              "line": 83,
+              "column": 44
+            }
+          },
+          "metadata": {},
+          "params": [
+            {
+              "name": "validator"
+            }
+          ]
+        },
+        {
+          "name": "_dropHandlerChanged",
+          "description": "Observer for drop-handler property changes.",
+          "privacy": "protected",
+          "sourceRange": {
+            "start": {
+              "line": 85,
+              "column": 7
+            },
+            "end": {
+              "line": 87,
+              "column": 43
+            }
+          },
+          "metadata": {},
+          "params": [
+            {
+              "name": "dropHandler"
+            }
+          ]
         }
       ],
       "staticMethods": [],
@@ -703,11 +1224,11 @@
       "metadata": {},
       "sourceRange": {
         "start": {
-          "line": 0,
-          "column": 33
+          "line": 15,
+          "column": 23
         },
         "end": {
-          "line": 52,
+          "line": 98,
           "column": 8
         }
       },
@@ -719,11 +1240,11 @@
           "description": "If true, hovering over the card will cause an overlay to appear\nwith more detailed information, including the description\nand an optional slot for showing a footer at the bottom.\n_Note: not recommended for mobile applications due to variation\nor lack of support for hover on mobile devices._",
           "sourceRange": {
             "start": {
-              "line": 6,
+              "line": 21,
               "column": 9
             },
             "end": {
-              "line": 6,
+              "line": 21,
               "column": 74
             }
           },
@@ -735,11 +1256,11 @@
           "description": "Main text label for the tile.",
           "sourceRange": {
             "start": {
-              "line": 10,
+              "line": 25,
               "column": 9
             },
             "end": {
-              "line": 10,
+              "line": 25,
               "column": 67
             }
           },
@@ -751,11 +1272,11 @@
           "description": "Subtitle text for the tile.",
           "sourceRange": {
             "start": {
-              "line": 12,
+              "line": 27,
               "column": 9
             },
             "end": {
-              "line": 12,
+              "line": 27,
               "column": 66
             }
           },
@@ -767,11 +1288,11 @@
           "description": "Description information to be displayed underneath tile and subtitle.\nDefault : Only the first ~3 lines of text will be displayed, after which it will be truncated.\nYou can customize by adjusting the `--px-tile-desc-text-height` CSS variable. (e.g. 1 line = 1 rem,\nto set to 5 lines truncated, set `--px-tile-desc-text-height: 5rem`).",
           "sourceRange": {
             "start": {
-              "line": 17,
+              "line": 32,
               "column": 9
             },
             "end": {
-              "line": 17,
+              "line": 32,
               "column": 69
             }
           },
@@ -783,11 +1304,11 @@
           "description": "Description information to be displayed in the overlay of a hoverable card.\nIt has more space to display text content and can be adjusted along with\ntotal height of the tile.",
           "sourceRange": {
             "start": {
-              "line": 21,
+              "line": 36,
               "column": 9
             },
             "end": {
-              "line": 21,
+              "line": 36,
               "column": 76
             }
           },
@@ -799,16 +1320,64 @@
           "description": "Configuration object for the action buttons displayed in the tile.\nThe primary button is displayed in the header/title area of the tile\nwhereas the rest are displayed at the bottom of the tile.\nThe `px-tile-action-tapped` event is fired when any of the action buttons is tapped.",
           "sourceRange": {
             "start": {
-              "line": 26,
+              "line": 41,
               "column": 9
             },
             "end": {
-              "line": 26,
+              "line": 41,
               "column": 78
             }
           },
           "metadata": {},
           "type": "Object"
+        },
+        {
+          "name": "title-editable",
+          "description": "Controls whether the title can be edited via an inline form.\nAlso enables behaviour where the title form will be shown if the title property is blank.",
+          "sourceRange": {
+            "start": {
+              "line": 44,
+              "column": 9
+            },
+            "end": {
+              "line": 44,
+              "column": 78
+            }
+          },
+          "metadata": {},
+          "type": "string"
+        },
+        {
+          "name": "title-validator",
+          "description": "Validator that's executed when the title is changed via the title form.\nUtilizes the px-validation component, supplied functions should return an object matching the following spec:\n{ valid: true or false, message: 'optional validation error message here' }",
+          "sourceRange": {
+            "start": {
+              "line": 48,
+              "column": 9
+            },
+            "end": {
+              "line": 48,
+              "column": 73
+            }
+          },
+          "metadata": {},
+          "type": "Function"
+        },
+        {
+          "name": "drop-handler",
+          "description": "Custom function that's invoked when the drop event is fired",
+          "sourceRange": {
+            "start": {
+              "line": 50,
+              "column": 9
+            },
+            "end": {
+              "line": 50,
+              "column": 67
+            }
+          },
+          "metadata": {},
+          "type": "Function"
         }
       ],
       "events": [
@@ -830,11 +1399,11 @@
           "range": {
             "file": "px-tile.html",
             "start": {
-              "line": 160,
+              "line": 177,
               "column": 10
             },
             "end": {
-              "line": 160,
+              "line": 177,
               "column": 40
             }
           }
@@ -845,11 +1414,11 @@
           "range": {
             "file": "px-tile.html",
             "start": {
-              "line": 218,
+              "line": 239,
               "column": 12
             },
             "end": {
-              "line": 218,
+              "line": 239,
               "column": 39
             }
           }
