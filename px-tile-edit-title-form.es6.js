@@ -53,8 +53,12 @@
      * Applies the input form value to the parent px-tile's mainTitle property (reflected via the currentTitle property) and hides the edit form
      */
     commitEdit: function() {
-      this.currentTitle = this.newTitle;
-      this.showEditForm = false;
+      const inputValidState = this.getValidity();
+      this.applyValidationStyle(inputValidState.valid, inputValidState.message);
+      if (inputValidState.valid) {
+        this.currentTitle = this.newTitle;
+        this.showEditForm = false;
+      }
     },
 
     /**
