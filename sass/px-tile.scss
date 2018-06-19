@@ -91,6 +91,16 @@ $inuit-enable-btn--disabled: true;
 }
 .tile{
   background-color: var(--px-tile-background-color, lightgray);
+  &.selected {
+    background-color: var(--px-tile-selected-background-color, white);
+    border: calculateRem(1px) solid darkslategray;
+    .tile-text-wrapper {
+      background-color: var(--px-tile-selected-text-background-color, white);
+    }
+    * {
+      pointer-events: none;
+    }
+  }
   .thumbnail {
     background-color: var(--px-tile-thumbnail-background-color, white);
   }
@@ -247,6 +257,11 @@ $inuit-enable-btn--disabled: true;
 }
 .action-button-container {
   margin: 3px;
+}
+// Chip dropzone
+.no-chip-message {
+  font-size: 0.8em;
+  text-align: center;
 }
 
 // Trumps

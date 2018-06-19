@@ -26,16 +26,12 @@ limitations under the License.
 <!--
 
 ### Usage
-    This is a helper component to support display of button on hover effect in px-tile and avoid duplicate code
+    This is a helper component to support editable titles via an inline edit form
     
-    <px-tile-action-buttons action-buttons="{{actionButtons}}" primary="true" overlay="false"></px-tile-action-buttons>
-    
-    If items <= 3 it will display the elements one after the other
-    If items > 3 it will display the list of elements in a dropdown
-    
+    <px-tile-edit-title-form validator="{{titleValidator}}" current-title="{{mainTitle}}" new-title="[[mainTitle]]" show-edit-form="{{_showEditForm}}"></px-tile-edit-title-form>
 
-@element px-tile-action-buttons
-@blurb A tile component for actionable icons/buttons/text
+@element px-tile-edit-title-form
+@blurb A tile component for editing the title
 @homepage index.html
 @demo index.html
 -->
@@ -61,4 +57,4 @@ limitations under the License.
     </div>
   </template>
 </dom-module>
-<script src="px-tile-edit-title-form.es6.js"></script>
+<script src="dist/px-tile-edit-title-form.js"></script>

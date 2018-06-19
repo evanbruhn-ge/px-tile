@@ -26,34 +26,50 @@
       validator: {
         type: Function
       },
-      valid: {
-        type: Boolean
-      },
+      /**
+       * The mainTitle property set on the px-tile when the px-tile-edit-title-form component was revealed
+       */
       currentTitle: {
         type: String,
         value: '',
         notify: true
       },
+      /**
+       * The current value of the px-tile edit title input field. If valid, this property is used to set the mainTitle property on save.
+       */
       newTitle: {
         type: String,
         value: ''
       },
+      /**
+       * Property used internally for showing or hiding the edit title form
+       */
       showEditForm: {
         type: Boolean,
         notify: true
       }
     },
+    /**
+     * Applies the input form value to the parent px-tile's mainTitle property (reflected via the currentTitle property) and hides the edit form
+     */
     commitEdit: function() {
       this.currentTitle = this.newTitle;
       this.showEditForm = false;
     },
 
+    /**
+     * Hides the edit form without saving
+     */
     cancelEdit: function() {
       this.newTitle = this.currentTitle;
       this.showEditForm = false;
       this.isValid();
     },
 
+    /**
+     * Applies validation styles to the edit form based on the result from the validator function,
+     * and triggers save and cancel with the Enter and Escape keys respectively.
+     */
     handleKeypress: function(e) {
       const inputValidState = this.getValidity();
       this.applyValidationStyle(inputValidState.valid, inputValidState.message);
@@ -67,6 +83,9 @@
       }
     },
 
+    /**
+     * Applies validation styles to the edit form.
+     */
     applyValidationStyle(valid, message) {
       const titleInput = this.$$('#titleInput');
       const invalidTitleError = this.$$('#invalidTitleError');
@@ -85,6 +104,9 @@
       }
     },
 
+    /**
+     * Determines the validity of the input value. If no validator function is provided, will always report true (ie. valid)
+     */
     getValidity: function() {
       return typeof this.validator === 'function' ? this.validator(this.newTitle) : { valid: true };
     }
