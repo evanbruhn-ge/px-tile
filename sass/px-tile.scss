@@ -259,9 +259,14 @@ $inuit-enable-btn--disabled: true;
   margin: 3px;
 }
 // Chip dropzone
-.no-chip-message {
-  font-size: 0.8em;
-  text-align: center;
+.chip-container {
+  .no-chip-message {
+    font-size: 0.8em;
+    text-align: center;
+  }
+  px-chip {
+    padding-right: 5px;
+  }
 }
 
 // Trumps

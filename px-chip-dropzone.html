@@ -39,7 +39,7 @@ limitations under the License.
 <dom-module id="px-chip-dropzone">
   <template>
     <style include="px-tile-styles"></style>
-    <div class="flex flex--wrap">
+    <div class="flex flex--wrap chip-container">
       <template is="dom-repeat" items="{{chips}}" rendered-item-count="{{chipCount}}" sort="_sortChipsByName">
           <px-chip content="{{item}}" icon="px-utl:close" show-icon not-selectable></px-chip>
       </template>
