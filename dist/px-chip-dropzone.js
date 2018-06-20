@@ -15,9 +15,9 @@
  * limitations under the License.
  */(function(){Polymer({is:'px-chip-dropzone',properties:{/**
        * An array of strings that's reflected as nested px-chips within this component.
-       */chips:{type:Array,value:[],notify:true,reflectToAttribute:true},/**
+       */chips:{type:Array,value:function value(){return[]}},/**
        * The message to display when the chips array is empty.
-       */defaultMessage:{type:String,value:'No chips, pal.',notify:true}},/**
+       */defaultMessage:{type:String,value:'No chips, pal.'}},/**
      * Add a chip by name
      */addChip:function addChip(name){if(!this.chips.includes(name))this.push('chips',name)},/**
      * Remove a chip by name

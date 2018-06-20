@@ -25,17 +25,16 @@
        */
       chips: {
         type: Array,
-        value: [],
-        notify: true,
-        reflectToAttribute: true
+        value: function() {
+          return [];
+        }
       },
       /**
        * The message to display when the chips array is empty.
        */
       defaultMessage: {
         type: String,
-        value: 'No chips, pal.',
-        notify: true
+        value: 'No chips, pal.'
       }
     },
     /**
