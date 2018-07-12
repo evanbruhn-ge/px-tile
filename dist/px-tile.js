@@ -23,7 +23,7 @@
        * Whether the tile is currently being hovered.
        */_hovered:{type:Boolean,value:false},/**
        * Main text label for the tile.
-       */mainTitle:{type:String,value:'',observer:'_onDataChanged'},/**
+       */mainTitle:{type:String,value:'',observer:'_onTitleChanged'},/**
        * Subtitle text for the tile.
        */subtitle:{type:String,value:'',observer:'_onDataChanged'},/**
         * Description information to be displayed underneath tile and subtitle.
@@ -72,7 +72,9 @@ this._hoverTextColor=window.getComputedStyle(this.$.overlay).color}},/**
      * Returns class to control overlay for hoverable tiles.
      */_getClass:function _getClass(hovered){return hovered?'hovered':''},/**
      * On change callback for actionButtons to set _hasActionButtons and _hasPrimaryBtn flag
-     */_actionButtonsChanged:function _actionButtonsChanged(){this._hasPrimaryBtn=false;this._hasActionButtons=this.actionButtons&&this.actionButtons.items&&this.actionButtons.items.length>0;if(this._hasActionButtons){var maxPrimaryButtons=this.actionButtons.maxPrimaryButtons||1;for(var x in this.actionButtons.items){if(this.actionButtons.items[x].isPrimary){this._hasPrimaryBtn=true;break}}}this._onDataChanged()},/**
+     */_actionButtonsChanged:function _actionButtonsChanged(){this._hasPrimaryBtn=false;this._hasActionButtons=this.actionButtons&&this.actionButtons.items&&this.actionButtons.items.length>0;if(this._hasActionButtons){var maxPrimaryButtons=this.actionButtons.maxPrimaryButtons||1;for(var x in this.actionButtons.items){if(this.actionButtons.items[x].isPrimary){this._hasPrimaryBtn=true;break}}}this._onDataChanged()},_onTitleChanged:function _onTitleChanged(newTitle,oldTitle){this._onDataChanged();// Do not fire event if the old title is undefined (to avoid firing the event when the element is first created)
+if(oldTitle===undefined)return;// Fire the event with the new title, and the previous title if it was set.
+var eventDetail={title:newTitle};if(oldTitle)eventDetail.previousTitle=oldTitle;this.fire('px-tile-title-changed',eventDetail)},/**
      * On change callback for either property to set _hasTitleActionBtn, _hasTitleSubtitleActionBtn, and _hasData flags
      */_onDataChanged:function _onDataChanged(){this._hasTitleActionBtn=this.mainTitle&&this.mainTitle.length>0||this._hasPrimaryBtn;this._hasTitleSubtitleActionBtn=this.subtitle&&this.subtitle.length>0||this._hasTitleActionBtn;this._hasData=this._hasActionButtons||this._hasTitleSubtitleActionBtn;this._showEditForm=this.mainTitle.length===0},/**
      * Observer for title-editable property, controls whether the title form will appear when _showEditForm property is true and/or when mainTitle property is blank

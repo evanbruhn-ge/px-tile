@@ -46,7 +46,7 @@
       mainTitle: {
         type: String,
         value: '',
-        observer: '_onDataChanged'
+        observer: '_onTitleChanged'
       },
       /**
        * Subtitle text for the tile.
@@ -218,6 +218,18 @@
       }
       this._onDataChanged();
     },
+
+    _onTitleChanged(newTitle, oldTitle) {
+      this._onDataChanged();
+      // Do not fire event if the old title is undefined (to avoid firing the event when the element is first created)
+      if (oldTitle === undefined) return;
+
+      // Fire the event with the new title, and the previous title if it was set.
+      const eventDetail = { title: newTitle };
+      if (oldTitle) eventDetail.previousTitle = oldTitle;
+      this.fire('px-tile-title-changed', eventDetail);
+    },
+
     /**
      * On change callback for either property to set _hasTitleActionBtn, _hasTitleSubtitleActionBtn, and _hasData flags
      */
