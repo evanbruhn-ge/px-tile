@@ -67,7 +67,6 @@
     cancelEdit: function() {
       this.newTitle = this.currentTitle;
       this.showEditForm = false;
-      this.isValid();
     },
 
     /**
