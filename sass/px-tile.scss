@@ -99,9 +99,6 @@ $inuit-enable-btn--disabled: true;
     .tile-text-wrapper {
       background-color: var(--px-tile-selected-text-background-color, white);
     }
-    * {
-      pointer-events: none;
-    }
   }
   .thumbnail {
     background-color: var(--px-tile-thumbnail-background-color, white);
