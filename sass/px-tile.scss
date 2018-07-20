@@ -95,7 +95,7 @@ $inuit-enable-btn--disabled: true;
   background-color: var(--px-tile-background-color, lightgray);
   &.selected {
     background-color: var(--px-tile-selected-background-color, white);
-    border: calculateRem(1px) solid darkslategray;
+    border: calculateRem(1px) solid var(--px-tile-selected-border-color, darkslategray);
     .tile-text-wrapper {
       background-color: var(--px-tile-selected-text-background-color, white);
     }

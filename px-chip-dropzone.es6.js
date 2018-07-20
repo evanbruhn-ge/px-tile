@@ -34,7 +34,7 @@
        */
       defaultMessage: {
         type: String,
-        value: 'No chips, pal.'
+        value: 'No pal, chips.'
       }
     },
     /**

@@ -17,7 +17,7 @@
        * An array of strings that's reflected as nested px-chips within this component.
        */chips:{type:Array,value:function value(){return[]}},/**
        * The message to display when the chips array is empty.
-       */defaultMessage:{type:String,value:'No chips, pal.'}},/**
+       */defaultMessage:{type:String,value:'No pal, chips.'}},/**
      * Add a chip by name
      */addChip:function addChip(name){if(!this.chips.includes(name))this.push('chips',name)},/**
      * Remove a chip by name

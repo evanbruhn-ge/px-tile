@@ -25,7 +25,7 @@
      * Applies the input form value to the parent px-tile's mainTitle property (reflected via the currentTitle property) and hides the edit form
      */commitEdit:function commitEdit(){var inputValidState=this.getValidity();this.applyValidationStyle(inputValidState.valid,inputValidState.message);if(inputValidState.valid){this.currentTitle=this.newTitle;this.showEditForm=false}},/**
      * Hides the edit form without saving
-     */cancelEdit:function cancelEdit(){this.newTitle=this.currentTitle;this.showEditForm=false;this.isValid()},/**
+     */cancelEdit:function cancelEdit(){this.newTitle=this.currentTitle;this.showEditForm=false},/**
      * Applies validation styles to the edit form based on the result from the validator function,
      * and triggers save and cancel with the Enter and Escape keys respectively.
      */handleKeypress:function handleKeypress(e){var inputValidState=this.getValidity();this.applyValidationStyle(inputValidState.valid,inputValidState.message);if(inputValidState.valid&&e.key==='Enter'){// Save on enter if input is valid
