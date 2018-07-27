@@ -34,7 +34,7 @@
        */
       defaultMessage: {
         type: String,
-        value: 'No pal, chips.'
+        value: 'Add objects by selecting connected nodes from the chart. Adding 2 or more nodes will denormalize data together.'
       }
     },
     /**
@@ -51,6 +51,18 @@
       if (index != -1) {
         this.splice('chips', index, 1);
       }
+    },
+    /**
+     * Select a chip by name
+     */
+    getChip: function(name) {
+      const allChips = this.root.querySelectorAll('px-chip');
+
+      if (!name) return allChips;
+      else
+        for (const chip of allChips) {
+          if (chip.content === name) return chip;
+        }
     },
     /**
      * Sort function used by dom-repeat template, sorts chips alphabetically
