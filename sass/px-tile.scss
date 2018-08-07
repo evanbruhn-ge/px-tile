@@ -267,7 +267,7 @@ $inuit-enable-btn--disabled: true;
     text-align: center;
   }
   px-chip {
-    padding-right: 5px;
+    padding: var(--px-chip-dropzone-padding, 0 10px 10px 0);
   }
 }
 
