@@ -488,12 +488,13 @@
             },
             "end": {
               "line": 23,
-              "column": 48
+              "column": 74
             }
           },
           "metadata": {
             "polymer": {
-              "notify": true
+              "notify": true,
+              "observer": "\"_focusEditForm\""
             }
           }
         }
@@ -594,6 +595,27 @@
           },
           "metadata": {},
           "params": []
+        },
+        {
+          "name": "_focusEditForm",
+          "description": "Focuses the user on the edit form input box, fires when edit form shown.",
+          "privacy": "protected",
+          "sourceRange": {
+            "start": {
+              "line": 38,
+              "column": 7
+            },
+            "end": {
+              "line": 38,
+              "column": 137
+            }
+          },
+          "metadata": {},
+          "params": [
+            {
+              "name": "shown"
+            }
+          ]
         }
       ],
       "staticMethods": [],
@@ -610,8 +632,8 @@
           "column": 23
         },
         "end": {
-          "line": 36,
-          "column": 128
+          "line": 38,
+          "column": 138
         }
       },
       "privacy": "public",
@@ -675,7 +697,7 @@
             },
             "end": {
               "line": 23,
-              "column": 48
+              "column": 74
             }
           },
           "metadata": {},

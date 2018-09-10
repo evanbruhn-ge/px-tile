@@ -21,7 +21,7 @@
        * The current value of the px-tile edit title input field. If valid, this property is used to set the mainTitle property on save.
        */newTitle:{type:String,value:''},/**
        * Property used internally for showing or hiding the edit title form
-       */showEditForm:{type:Boolean,notify:true}},/**
+       */showEditForm:{type:Boolean,notify:true,observer:'_focusEditForm'}},/**
      * Applies the input form value to the parent px-tile's mainTitle property (reflected via the currentTitle property) and hides the edit form
      */commitEdit:function commitEdit(){var inputValidState=this.getValidity();this.applyValidationStyle(inputValidState.valid,inputValidState.message);if(inputValidState.valid){this.currentTitle=this.newTitle;this.showEditForm=false}},/**
      * Hides the edit form without saving
@@ -34,5 +34,7 @@ this.cancelEdit()}},/**
      * Applies validation styles to the edit form.
      */applyValidationStyle:function applyValidationStyle(valid,message){var titleInput=this.$$('#titleInput');var invalidTitleError=this.$$('#invalidTitleError');var saveButton=this.$$('#commitEdit');if(valid){invalidTitleError.classList.add('hidden');invalidTitleError.innerText='';titleInput.classList.remove('validation-error');saveButton.disabled=false}else{invalidTitleError.classList.remove('hidden');invalidTitleError.innerText=message||'Invalid title';titleInput.classList.add('validation-error');saveButton.disabled=true}},/**
      * Determines the validity of the input value. If no validator function is provided, will always report true (ie. valid)
-     */getValidity:function getValidity(){return typeof this.validator==='function'?this.validator(this.newTitle):{valid:true}}})})();
+     */getValidity:function getValidity(){return typeof this.validator==='function'?this.validator(this.newTitle):{valid:true}},/**
+     * Focuses the user on the edit form input box, fires when edit form shown.
+     */_focusEditForm:function _focusEditForm(shown){var _this=this;if(shown){setTimeout(function(){_this.$$('#titleInput').focus()},0)}}})})();
 //# sourceMappingURL=px-tile-edit-title-form.js.map

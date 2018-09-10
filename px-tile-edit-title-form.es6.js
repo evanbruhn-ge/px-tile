@@ -46,7 +46,8 @@
        */
       showEditForm: {
         type: Boolean,
-        notify: true
+        notify: true,
+        observer: '_focusEditForm'
       }
     },
     /**
@@ -112,6 +113,17 @@
      */
     getValidity: function() {
       return typeof this.validator === 'function' ? this.validator(this.newTitle) : { valid: true };
+    },
+
+    /**
+     * Focuses the user on the edit form input box, fires when edit form shown.
+     */
+    _focusEditForm: function(shown) {
+      if (shown) {
+        setTimeout(() => {
+          this.$$('#titleInput').focus();
+        }, 0);
+      }
     }
   });
 })();
