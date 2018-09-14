@@ -46,7 +46,7 @@
       mainTitle: {
         type: String,
         value: '',
-        observer: '_onDataChanged'
+        observer: '_onTitleChanged'
       },
       /**
        * Subtitle text for the tile.
@@ -87,6 +87,46 @@
         type: Object,
         value: {},
         observer: '_actionButtonsChanged'
+      },
+      /**
+       * Controls whether the title can be edited via an inline form.
+       * Also enables behaviour where the title form will be shown if the title property is blank.
+       */
+      titleEditable: {
+        type: String,
+        value: '',
+        observer: '_titleEditableChanged'
+      },
+      /**
+       * Validator that's executed when the title is changed via the title form.
+       * Utilizes the px-validation component, supplied functions should return an object matching the following spec:
+       * { valid: true or false, message: 'optional validation error message here' }
+       */
+      titleValidator: {
+        type: Function,
+        observer: '_titleValidatorChanged'
+      },
+      /**
+       * Custom function that's invoked when the drop event is fired
+       */
+      dropHandler: {
+        type: Function,
+        observer: '_dropHandlerChanged'
+      },
+      /**
+       * Property used internally for showing or hiding the edit title form
+       */
+      _showEditForm: {
+        type: Boolean,
+        value: true
+      },
+      /**
+       * Property used internally for determining the selected state on the px-tile
+       */
+      _selected: {
+        type: Boolean,
+        value: false,
+        observer: '_selectedChanged'
       }
     },
     /**
@@ -96,6 +136,31 @@
       if(this.hoverable) {
         this._hovered = !this._hovered;
       }
+    },
+    /**
+     * Method used internally for setting the selected state based on the input event
+     */
+    _handleDrag(e) {
+      e.preventDefault();
+      this._selected = e.type === 'dragenter';
+    },
+    /**
+     * Handles the drop event, and prevents other drag events from blocking the drop event.
+     * The drop event will be passed to the px-tile's drop-handler function if available.
+     */
+    _handleDrop(e) {
+      e.preventDefault();
+      if (e.type === 'drop') {
+        this._selected = false;
+        if (typeof this.dropHandler === 'function') this.dropHandler(e.dataTransfer.getData('text'), this, e);
+      }
+    },
+    /**
+     * Sets or removes the selected class from the px-tile container based on the selected state
+     */
+    _selectedChanged() {
+      if (this._selected) this.$.tile.classList.add('selected');
+      else this.$.tile.classList.remove('selected');
     },
     /**
      * On change callback to remove overlay
@@ -114,6 +179,10 @@
     attached() {
       this.listen(this.$.overlay, 'mouseenter', '_hover');
       this.listen(this.$.overlay, 'mouseleave', '_hover');
+      this.listen(this, 'dragenter', '_handleDrag');
+      this.listen(this, 'dragleave', '_handleDrag');
+      this.listen(this, 'dragover', '_handleDrop');
+      this.listen(this, 'drop', '_handleDrop');
     },
     /**
      * Detach event listeners for hoverable tiles.
@@ -121,6 +190,10 @@
     detached() {
       this.unlisten(this.$.overlay, 'mouseenter');
       this.unlisten(this.$.overlay, 'mouseleave');
+      this.unlisten(this, 'dragenter');
+      this.unlisten(this, 'dragleave');
+      this.listen(this, 'dragover');
+      this.listen(this, 'drop');
     },
     /**
      * Returns class to control overlay for hoverable tiles.
@@ -145,6 +218,18 @@
       }
       this._onDataChanged();
     },
+
+    _onTitleChanged(newTitle, oldTitle) {
+      this._onDataChanged();
+      // Do not fire event if the old title is undefined (to avoid firing the event when the element is first created)
+      if (oldTitle === undefined) return;
+
+      // Fire the event with the new title, and the previous title if it was set.
+      const eventDetail = { title: newTitle };
+      if (oldTitle) eventDetail.previousTitle = oldTitle;
+      this.fire('px-tile-title-changed', eventDetail);
+    },
+
     /**
      * On change callback for either property to set _hasTitleActionBtn, _hasTitleSubtitleActionBtn, and _hasData flags
      */
@@ -152,7 +237,40 @@
       this._hasTitleActionBtn = this.mainTitle && this.mainTitle.length > 0|| this._hasPrimaryBtn;
       this._hasTitleSubtitleActionBtn = this.subtitle && this.subtitle.length > 0 || this._hasTitleActionBtn;
       this._hasData = this._hasActionButtons || this._hasTitleSubtitleActionBtn;
+      this._showEditForm = this.mainTitle.length === 0;
+    },
+
+    /**
+     * Observer for title-editable property, controls whether the title form will appear when _showEditForm property is true and/or when mainTitle property is blank
+     */
+    _titleEditableChanged(title) {
+      // TODO: This does nothing yet.
+    },
+
+    /**
+     * Observer for title-validator property changes.
+     */
+    _titleValidatorChanged(validator) {
+      // Handle functions specified in component markup (ie. strings)
+      if (typeof validator === 'string') {
+        // TODO: There must be a better way!
+        this.titleValidator = eval(validator);
+        return;
+      }
+    },
+
+    /**
+     * Observer for drop-handler property changes.
+     */
+    _dropHandlerChanged(dropHandler) {
+      // Handle functions specified in component markup (ie. strings)
+      if (typeof dropHandler === 'string') {
+        // TODO: There must be a better way!
+        this.dropHandler = eval(dropHandler);
+        return;
+      }
     }
+
     /**
      * @event px-tile-action-tapped
      *

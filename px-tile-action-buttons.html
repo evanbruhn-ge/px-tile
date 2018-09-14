@@ -44,7 +44,7 @@ limitations under the License.
   <template>
     <style include="px-tile-styles"></style>
     <template is="dom-if" if="{{_isDisplayButtons}}">
-      <div class="flex flex--right">
+      <div class="flex flex--right action-button-container">
 		    <template is="dom-repeat" items="[[_items]]">
            <button class$="btn {{_getBtnClazz(item)}}" 
             style$="{{_getBtnColor(item)}} {{item.style}}" 
@@ -67,7 +67,9 @@ limitations under the License.
 				  select-by="key"
 				  button-style="icon"
 				  icon="px-nav:more"
-				  disable-clear
+                  disable-clear
+                  disable-select
+                  on-px-dropdown-click="_itemSelected"
 				  hide-chevron>
 				</px-dropdown>
       </div>

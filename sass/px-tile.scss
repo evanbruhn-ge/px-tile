@@ -19,34 +19,41 @@
 // Tools
 
 // Generic
-@import "px-normalize-design/_generic.normalize.scss";
-@import "px-box-sizing-design/_generic.box-sizing.scss";
-@import "px-helpers-design/_generic.helpers.scss";
+@import 'px-normalize-design/_generic.normalize.scss';
+@import 'px-box-sizing-design/_generic.box-sizing.scss';
+@import 'px-helpers-design/_generic.helpers.scss';
 
 // Base
-@import "px-headings-design/_base.headings.scss";
+@import 'px-headings-design/_base.headings.scss';
 
 // Meta
 
 // Objects
-@import "px-shadows-design/_objects.shadows.scss";
-@import "px-flexbox-design/_base.flexbox.scss";
+@import 'px-shadows-design/_objects.shadows.scss';
+@import 'px-flexbox-design/_base.flexbox.scss';
 
-$inuit-enable-btn--small : true;
-$inuit-enable-btn--large : true;
-$inuit-enable-btn--huge : true;
-$inuit-enable-btn--full : true;
-$inuit-enable-btn--primary : true;
-$inuit-enable-btn--tertiary : true;
-$inuit-enable-btn--call-to-action : true;
-$inuit-enable-btn--bare : true;
-$inuit-enable-btn--bare--primary : true;
-$inuit-enable-btn--icon : true;
-$inuit-enable-btn--disabled : true;
-@import "px-buttons-design/_objects.buttons.scss";
+// Forms
+$inuit-enable-validation-states: true;
+@import 'px-forms-design/_base.forms.scss';
+
+// Colors
+@import 'px-colors-design/_settings.colors.scss';
+
+$inuit-enable-btn--small: true;
+$inuit-enable-btn--large: true;
+$inuit-enable-btn--huge: true;
+$inuit-enable-btn--full: true;
+$inuit-enable-btn--primary: true;
+$inuit-enable-btn--tertiary: true;
+$inuit-enable-btn--call-to-action: true;
+$inuit-enable-btn--bare: true;
+$inuit-enable-btn--bare--primary: true;
+$inuit-enable-btn--icon: true;
+$inuit-enable-btn--disabled: true;
+@import 'px-buttons-design/_objects.buttons.scss';
 
 /* mixin for multiline */
-@mixin multiLineEllipsis($lineHeight: 1.2em, $lineCount: 1, $bgColor: white){
+@mixin multiLineEllipsis($lineHeight: 1.2em, $lineCount: 1, $bgColor: white) {
   overflow: hidden;
   position: relative;
   line-height: $lineHeight;
@@ -75,21 +82,32 @@ $inuit-enable-btn--disabled : true;
 .tile__container {
   position: relative;
 }
-.tile__container, .tile, .overlay {
+.tile__container,
+.tile,
+.overlay {
   width: var(--px-tile-width, calculateRem(300px));
   max-width: var(--px-tile-width, calculateRem(300px));
-  height: var(--px-tile-height, calculateRem(300px));
-  max-height: var(--px-tile-height, calculateRem(300px));
+  height: var(--px-tile-height, 100%);
+  max-height: var(--px-tile-height, 100%);
+  height: var(--px-tile-height, unset);
+  max-height: var(--px-tile-height, unset);
   overflow: hidden;
 }
-.tile{
+.tile {
   background-color: var(--px-tile-background-color, lightgray);
+  &.selected {
+    background-color: var(--px-tile-selected-background-color, white);
+    border: calculateRem(1px) solid var(--px-tile-selected-border-color, darkslategray);
+    .tile-text-wrapper {
+      background-color: var(--px-tile-selected-text-background-color, white);
+    }
+  }
   .thumbnail {
     background-color: var(--px-tile-thumbnail-background-color, white);
   }
   .tile-text-wrapper {
     padding: calculateRem(15px);
-    position: absolute;
+    position: relative;
     bottom: 0;
     width: 100%;
     background-color: var(--px-tile-text-background-color, lightgray);
@@ -98,7 +116,9 @@ $inuit-enable-btn--disabled : true;
       line-height: calculateRem(22px);
     }
     .title-container {
-      padding-bottom: calculateRem(10px);
+      // TODO: Make dynamic
+      //padding-bottom: calculateRem(10px);
+      padding-bottom: calculateRem(25px);
     }
     .subtitle-span {
       color: var(--px-tile-subtitle-color, gray);
@@ -125,9 +145,8 @@ $inuit-enable-btn--disabled : true;
       color: var(--px-tile-text-color, darkslategray);
     }
     .block-with-text {
-      @include multiLineEllipsis($lineHeight: 1rem, $lineCount: 2, $bgColor: var(--px-tile-text-background-color, lightgray ));
+      @include multiLineEllipsis($lineHeight: 1rem, $lineCount: 2, $bgColor: var(--px-tile-text-background-color, lightgray));
     }
-    
   }
   .tile-text-wrapper.tile-text-adjust {
     min-height: var(--px-tile-about-min-height, 0);
@@ -138,13 +157,13 @@ $inuit-enable-btn--disabled : true;
 }
 
 .overlay {
-  position: absolute;
+  position: relative;
   top: 0;
   background-color: var(--px-tile-overlay-background-color, black);
   color: var(--px-tile-overlay-text-color, white);
   opacity: 0;
-  transition: opacity 0.4s cubic-bezier(.78,.13,.16,.87);
-  .header-wrapper{
+  transition: opacity 0.4s cubic-bezier(0.78, 0.13, 0.16, 0.87);
+  .header-wrapper {
     margin-top: 1.6rem;
     .title-span {
       width: 100%;
@@ -174,7 +193,9 @@ $inuit-enable-btn--disabled : true;
     margin-top: calculateRem(5px);
     margin-bottom: calculateRem(10px);
   }
-  .header-wrapper, .text, .footer {
+  .header-wrapper,
+  .text,
+  .footer {
     transition: margin-top 0.2s cubic-bezier(0.78, 0.13, 0.16, 0.87) 0.1s;
   }
   .overlay-top-content {
@@ -183,7 +204,7 @@ $inuit-enable-btn--disabled : true;
   .footer-container {
     position: absolute;
     bottom: var(--px-tile-action-buttons-bottom, 15px);
-    right: var(--px-tile-action-buttons-right, 15px);  
+    right: var(--px-tile-action-buttons-right, 15px);
     width: 100%;
     background-color: var(--px-tile-overlay-background-color, black);
   }
@@ -191,7 +212,8 @@ $inuit-enable-btn--disabled : true;
 
 .hovered.overlay {
   opacity: 1;
-  .header-wrapper, .footer {
+  .header-wrapper,
+  .footer {
     margin-top: 1rem;
   }
 }
@@ -203,18 +225,50 @@ $inuit-enable-btn--disabled : true;
   color: var(--px-tile-overlay-text-color, lightgray);
 }
 .btn-tile-bare-primary {
-  color: var(--px-btn-bare-color,#2c404c);
+  color: var(--px-btn-bare-color, #2c404c);
 }
 .action-buttons-wrapper {
-  position: var(--px-tile-action-buttons-position);   
-  right: var(--px-tile-action-buttons-right);   
-  bottom: var(--px-tile-action-buttons-bottom);   
-     
+  position: var(--px-tile-action-buttons-position);
+  right: var(--px-tile-action-buttons-right);
+  bottom: var(--px-tile-action-buttons-bottom);
 }
 .action-overlay-btns {
-  position: var(--px-tile-overlay-action-buttons-position);  
-  bottom: var(--px-tile-overlay-action-buttons-bottom);  
-  right: var(--px-tile-overlay-action-buttons-right);  
-  width: var(--px-tile-overlay-width); 
+  position: var(--px-tile-overlay-action-buttons-position);
+  bottom: var(--px-tile-overlay-action-buttons-bottom);
+  right: var(--px-tile-overlay-action-buttons-right);
+  width: var(--px-tile-overlay-width);
 }
+.title-edit-button {
+  margin-left: 0 !important;
+
+  .rounded {
+    width: 20px;
+    height: 20px;
+    --iron-icon-width: 20px;
+    --iron-icon-height: 20px;
+    border-radius: 50%;
+    border: 1px solid var(--px-tile-edit-form-button-color, #007acc);
+    stroke: var(--px-tile-edit-form-button-color, #007acc);
+    padding: 2px;
+  }
+
+  &:disabled .rounded {
+    border: 1px solid var(--px-tile-edit-form-button-disabled-color, $neutral-gray5);
+    stroke: var(--px-tile-edit-form-button-disabled-color, $neutral-gray5);
+  }
+}
+.action-button-container {
+  margin: 3px;
+}
+// Chip dropzone
+.chip-container {
+  .no-chip-message {
+    font-size: 0.8em;
+    text-align: center;
+  }
+  px-chip {
+    padding: var(--px-chip-dropzone-padding, 0 10px 10px 0);
+  }
+}
+
 // Trumps
