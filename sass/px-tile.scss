@@ -144,9 +144,6 @@ $inuit-enable-btn--disabled: true;
       margin-bottom: calculateRem(10px);
       color: var(--px-tile-text-color, darkslategray);
     }
-    .block-with-text {
-      @include multiLineEllipsis($lineHeight: 1rem, $lineCount: 2, $bgColor: var(--px-tile-text-background-color, lightgray));
-    }
   }
   .tile-text-wrapper.tile-text-adjust {
     min-height: var(--px-tile-about-min-height, 0);
